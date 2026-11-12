@@ -1,0 +1,34 @@
+{
+  "clv_origin": {
+    "cases": 93,
+    "data_kind": "synthetic",
+    "doi": "10.1002/dir.10045",
+    "generator": "tools/generate_clv_reference.py",
+    "reference": "Exact rational geometric-series closed form, Gupta and Lehmann (2003), equation 3"
+  },
+  "rfm_origin": {
+    "case_rows": 11076,
+    "cases": 204,
+    "data_kind": "synthetic",
+    "error_cases": 12,
+    "generator": "tools/reference/rfm/generate_rfm.py",
+    "group_counts": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      255
+    ],
+    "population_rows": 300,
+    "reference": "Exact rational ordering and integer band arithmetic from the documented banding rules",
+    "seed": 20261112
+  },
+  "sha256": {
+    "tests/fixtures/clv/constant_margin.json": "825393065df60cfb4ff46ced012f9c806974846c28dbaf8983397a1e42e20f37",
+    "tests/fixtures/rfm/cases.json": "a08af1c9b94edd852534b65e2bbfc68f7692a9865a94ae19dfdf42b4e379d36c",
+    "tests/fixtures/rfm/errors.json": "fab6aa89ac0decd08d23d81824ba36e81f5b9f5248cb7fb0e3a1a84713e3ca95",
+    "tests/fixtures/rfm/manifest.json": "adef53352775b33a6859cefd8a5595488d105381c5fa66949ea76fe63d59e510",
+    "tests/fixtures/rfm/population.csv": "eed8e270e194e1e92d1fc8a6d622b3b7067b5f16499c3fc1136242ad11fa4045"
+  }
+}

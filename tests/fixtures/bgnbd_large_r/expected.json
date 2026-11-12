@@ -1,0 +1,4095 @@
+{
+  "schema": "bgnbd-large-r-synthetic-posterior-integral-v1",
+  "input_semantics": "Each decimal JSON numeric input denotes its nearest binary64, integrated at its exact rational value.",
+  "primary_source": "https://doi.org/10.1287/mksc.1040.0098",
+  "derivation": "Conditional on being active, lambda is Gamma(r+x, alpha+T) and p is Beta(a, b+x). E future | active = integral over p of (1-(1+p*h/(alpha+T))^-(r+x))/p times the beta posterior. Multiply by the posterior active probability.",
+  "method": "mpmath tanh-sinh posterior integral; no Rust or native evaluation",
+  "tolerances": {
+    "scalar": {
+      "absolute": 1e-12,
+      "relative": 1e-09
+    }
+  },
+  "cases": [
+    {
+      "id": "reported",
+      "note": "the reported wrong forecasts",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 104.0,
+          "probability_active": 1.0,
+          "expected_if_active": 12.977220324032245,
+          "expected_purchases": 12.977220324032245
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 17.836268845151363,
+          "expected_purchases": 17.836268845151363
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.26835907061445563,
+          "expected_purchases": 0.26835907061445563
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.542188577934146,
+          "expected_purchases": 2.542188577934146
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 6.013444630883837,
+          "expected_purchases": 6.013444630883837
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 12.262004716899806,
+          "expected_purchases": 12.262004716899806
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 19.7532273524272,
+          "expected_purchases": 19.7532273524272
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.0012800558869938972,
+          "expected_if_active": 0.31287095731748243,
+          "expected_purchases": 0.0004004923107836597
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.0012800558869938972,
+          "expected_if_active": 3.3142098887171603,
+          "expected_purchases": 0.00424237387878579
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.0012800558869938972,
+          "expected_if_active": 8.934843605329059,
+          "expected_purchases": 0.01143709915637124
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.0012800558869938972,
+          "expected_if_active": 20.509076621502135,
+          "expected_purchases": 0.026252764266162715
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.0012800558869938972,
+          "expected_if_active": 35.023821377212684,
+          "expected_purchases": 0.0448324487389238
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.10084289455205325,
+          "expected_if_active": 0.826886275349976,
+          "expected_purchases": 0.0833856054716577
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.10084289455205325,
+          "expected_if_active": 9.873493367311736,
+          "expected_purchases": 0.9956716505002147
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.10084289455205325,
+          "expected_if_active": 32.074853769493096,
+          "expected_purchases": 3.2345210964495203
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.10084289455205325,
+          "expected_if_active": 92.49104700788553,
+          "expected_purchases": 9.327064900425201
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.10084289455205325,
+          "expected_if_active": 179.3164589319532,
+          "expected_purchases": 18.082790759522545
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.2510663151155473,
+          "expected_purchases": 0.2510663151155473
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.3860377491337368,
+          "expected_purchases": 1.3860377491337368
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.8168603796348999,
+          "expected_purchases": 1.8168603796348999
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.030925144336592,
+          "expected_purchases": 2.030925144336592
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.115655886578244,
+          "expected_purchases": 2.115655886578244
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.00039479648643903287,
+          "expected_if_active": 0.3044964546198498,
+          "expected_purchases": 0.00012021413041705912
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.00039479648643903287,
+          "expected_if_active": 2.530753307555634,
+          "expected_purchases": 0.0009991325138669256
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.00039479648643903287,
+          "expected_if_active": 4.740334142991372,
+          "expected_purchases": 0.0018714672641999778
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.00039479648643903287,
+          "expected_if_active": 6.551005326795988,
+          "expected_purchases": 0.0025863138856624442
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.00039479648643903287,
+          "expected_if_active": 7.365186789939427,
+          "expected_purchases": 0.002907749866635265
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.05399446201711173,
+          "expected_if_active": 0.8209616433419752,
+          "expected_purchases": 0.0443273822689339
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.05399446201711173,
+          "expected_if_active": 9.083386707830831,
+          "expected_purchases": 0.49045257858270935
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.05399446201711173,
+          "expected_if_active": 24.893039070311932,
+          "expected_purchases": 1.344086252572436
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.05399446201711173,
+          "expected_if_active": 49.444145553837295,
+          "expected_purchases": 2.6697100390752113
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.05399446201711173,
+          "expected_if_active": 64.75570578722964,
+          "expected_purchases": 3.496449496519833
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.27497748895419977,
+          "expected_purchases": 0.27497748895419977
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.1850135515356057,
+          "expected_purchases": 3.1850135515356057
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.31397504321457,
+          "expected_purchases": 9.31397504321457
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 18.069372837583096,
+          "expected_purchases": 18.069372837583096
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.63989050214462,
+          "expected_purchases": 20.63989050214462
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.003179856509828621,
+          "expected_if_active": 0.31600610585936934,
+          "expected_purchases": 0.001004854072862508
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.003179856509828621,
+          "expected_if_active": 3.632909455457905,
+          "expected_purchases": 0.01155213078155577
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.003179856509828621,
+          "expected_if_active": 10.442145778832561,
+          "expected_purchases": 0.033204525231400175
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.003179856509828621,
+          "expected_if_active": 19.64521004246503,
+          "expected_purchases": 0.06246894904048303
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.003179856509828621,
+          "expected_if_active": 22.162929268354482,
+          "expected_purchases": 0.07047493491084829
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.05386545690183296,
+          "expected_if_active": 0.8207461464639715,
+          "expected_purchases": 0.04420986617970054
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.05386545690183296,
+          "expected_if_active": 9.004989701435976,
+          "expected_purchases": 0.48505788466414923
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.05386545690183296,
+          "expected_if_active": 23.421876667960735,
+          "expected_purchases": 1.261630088218086
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.05386545690183296,
+          "expected_if_active": 37.88729722849437,
+          "expected_purchases": 2.0408165759883987
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.05386545690183296,
+          "expected_if_active": 40.69015537328818,
+          "expected_purchases": 2.191793810588741
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.255469465223416,
+          "expected_purchases": 0.255469465223416
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.811445267989251,
+          "expected_purchases": 1.811445267989251
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 4.1282889777762275,
+          "expected_purchases": 4.1282889777762275
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 11.601967553319703,
+          "expected_purchases": 11.601967553319703
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 29.618910753176493,
+          "expected_purchases": 29.618910753176493
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.0016681650887754738,
+          "expected_if_active": 0.31502798924922126,
+          "expected_purchases": 0.0005255186936526862
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.0016681650887754738,
+          "expected_if_active": 3.606967673531925,
+          "expected_purchases": 0.006017017549327648
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.0016681650887754738,
+          "expected_if_active": 11.662759729543518,
+          "expected_purchases": 0.019455408619600986
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.0016681650887754738,
+          "expected_if_active": 40.24106815312485,
+          "expected_purchases": 0.0671287450280774
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.0016681650887754738,
+          "expected_if_active": 110.4558754257677,
+          "expected_purchases": 0.18425863523539845
+        }
+      ]
+    },
+    {
+      "id": "grid_r20_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 20.0,
+        "alpha": 20.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.22027210279293782,
+          "expected_if_active": 0.8307416870741934,
+          "expected_purchases": 0.1829892182895853
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.22027210279293782,
+          "expected_if_active": 10.43629753238419,
+          "expected_purchases": 2.2988252028310137
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.22027210279293782,
+          "expected_if_active": 38.354626676162,
+          "expected_purchases": 8.448454269796311
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.22027210279293782,
+          "expected_if_active": 152.5624186554015,
+          "expected_purchases": 33.60524476440182
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.22027210279293782,
+          "expected_if_active": 449.72961841015257,
+          "expected_purchases": 99.06288873546983
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.46246428716339477,
+          "expected_purchases": 0.46246428716339477
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.768623234587057,
+          "expected_purchases": 3.768623234587057
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.986100091861926,
+          "expected_purchases": 7.986100091861926
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 15.133828896061978,
+          "expected_purchases": 15.133828896061978
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 23.580775780059593,
+          "expected_purchases": 23.580775780059593
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.4390519893921717e-05,
+          "expected_if_active": 0.5028818280557702,
+          "expected_purchases": 7.236730950928281e-06
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.4390519893921717e-05,
+          "expected_if_active": 4.864165695272161,
+          "expected_purchases": 6.999787320514559e-05
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.4390519893921717e-05,
+          "expected_if_active": 11.912006426890361,
+          "expected_purchases": 0.0001714199654626891
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.4390519893921717e-05,
+          "expected_if_active": 25.193116588236993,
+          "expected_purchases": 0.00036254204545291366
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.4390519893921717e-05,
+          "expected_if_active": 41.37030637209373,
+          "expected_purchases": 0.0005953402168652512
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.07945347056531595,
+          "expected_if_active": 0.8751685147144224,
+          "expected_purchases": 0.06953517582355363
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.07945347056531595,
+          "expected_if_active": 10.406880571305308,
+          "expected_purchases": 0.8268627791489646
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.07945347056531595,
+          "expected_if_active": 33.539349115766214,
+          "expected_purchases": 2.6648176877493857
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.07945347056531595,
+          "expected_if_active": 95.5257001850762,
+          "expected_purchases": 7.589848407886147
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.07945347056531595,
+          "expected_if_active": 183.76715000426336,
+          "expected_purchases": 14.600937843735737
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.4134418323458637,
+          "expected_purchases": 0.4134418323458637
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.6159655205528052,
+          "expected_purchases": 1.6159655205528052
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.9171411887390877,
+          "expected_purchases": 1.9171411887390877
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.0743598948383317,
+          "expected_purchases": 2.0743598948383317
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1372568841295743,
+          "expected_purchases": 2.1372568841295743
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 4.434456206125253e-06,
+          "expected_if_active": 0.48194412600450814,
+          "expected_purchases": 2.137160120566302e-06
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 4.434456206125253e-06,
+          "expected_if_active": 3.332829130806405,
+          "expected_purchases": 1.4779284823059495e-05
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 4.434456206125253e-06,
+          "expected_if_active": 5.4256375672564765,
+          "expected_purchases": 2.4059752182306798e-05
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 4.434456206125253e-06,
+          "expected_if_active": 6.910507724978214,
+          "expected_purchases": 3.064434386850614e-05
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 4.434456206125253e-06,
+          "expected_if_active": 7.550473885668942,
+          "expected_purchases": 3.3482245781491285e-05
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.042076886515585804,
+          "expected_if_active": 0.8685694567380103,
+          "expected_purchases": 0.036546698462069274
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.042076886515585804,
+          "expected_if_active": 9.53587690734216,
+          "expected_purchases": 0.40124001045683144
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.042076886515585804,
+          "expected_if_active": 25.774243292043383,
+          "expected_purchases": 1.0844999100244082
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.042076886515585804,
+          "expected_if_active": 50.27462212448415,
+          "expected_purchases": 2.115399569745879
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.042076886515585804,
+          "expected_if_active": 65.25873797112071,
+          "expected_purchases": 2.7458845117611963
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.4817763508687851,
+          "expected_purchases": 0.4817763508687851
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 5.171672736731409,
+          "expected_purchases": 5.171672736731409
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 12.880539075154731,
+          "expected_purchases": 12.880539075154731
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 19.71839850004535,
+          "expected_purchases": 19.71839850004535
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.87956086042893,
+          "expected_purchases": 20.87956086042893
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 3.58156376875757e-05,
+          "expected_if_active": 0.5107729121003017,
+          "expected_purchases": 1.8293657560412356e-05
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 3.58156376875757e-05,
+          "expected_if_active": 5.49286640926448,
+          "expected_purchases": 0.0001967305131804715
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 3.58156376875757e-05,
+          "expected_if_active": 13.728173808142628,
+          "expected_purchases": 0.0004916832992245027
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 3.58156376875757e-05,
+          "expected_if_active": 21.10339207269493,
+          "expected_purchases": 0.0007558314444544988
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 3.58156376875757e-05,
+          "expected_if_active": 22.36821337531558,
+          "expected_purchases": 0.0008011318259686874
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.04197509180512818,
+          "expected_if_active": 0.8683274667528501,
+          "expected_purchases": 0.03644812513386527
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.04197509180512818,
+          "expected_if_active": 9.44701086379935,
+          "expected_purchases": 0.396539148292021
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.04197509180512818,
+          "expected_if_active": 24.149665402618155,
+          "expected_purchases": 1.0136844223380248
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.04197509180512818,
+          "expected_if_active": 38.16230374287767,
+          "expected_purchases": 1.601866203102477
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.04197509180512818,
+          "expected_if_active": 40.72488940852276,
+          "expected_purchases": 1.7094309716764353
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.4263205347184445,
+          "expected_purchases": 0.4263205347184445
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.5374732178002803,
+          "expected_purchases": 2.5374732178002803
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 5.906059867162767,
+          "expected_purchases": 5.906059867162767
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 17.025473629049266,
+          "expected_purchases": 17.025473629049266
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 43.90350525404251,
+          "expected_purchases": 43.90350525404251
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.876089209030813e-05,
+          "expected_if_active": 0.508397335276002,
+          "expected_purchases": 9.537987546113275e-06
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.876089209030813e-05,
+          "expected_if_active": 5.533805299989013,
+          "expected_purchases": 0.00010381912408186908
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.876089209030813e-05,
+          "expected_if_active": 17.19271299643814,
+          "expected_purchases": 0.00032255063326581403
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.876089209030813e-05,
+          "expected_if_active": 57.73280788825038,
+          "expected_purchases": 0.0010831189788619554
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.876089209030813e-05,
+          "expected_if_active": 156.83850096871717,
+          "expected_purchases": 0.0029424301922797895
+        }
+      ]
+    },
+    {
+      "id": "grid_r50_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 50.0,
+        "alpha": 50.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.17858212251384448,
+          "expected_if_active": 0.8794645206112601,
+          "expected_purchases": 0.15705664076637957
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.17858212251384448,
+          "expected_if_active": 11.029987178000365,
+          "expected_purchases": 1.9697585215477948
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.17858212251384448,
+          "expected_if_active": 40.40454763224009,
+          "expected_purchases": 7.215529875377165
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.17858212251384448,
+          "expected_if_active": 159.88178886491858,
+          "expected_purchases": 28.552029206807504
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.17858212251384448,
+          "expected_if_active": 469.78228874116127,
+          "expected_purchases": 83.89471824280832
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.6094579857140745,
+          "expected_purchases": 0.6094579857140745
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 4.525823541108826,
+          "expected_purchases": 4.525823541108826
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.12095829693965,
+          "expected_purchases": 9.12095829693965
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 16.75333221272735,
+          "expected_purchases": 16.75333221272735
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 25.731222425031522,
+          "expected_purchases": 25.731222425031522
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 5.706870375901723e-07,
+          "expected_if_active": 0.6497723936840969,
+          "expected_purchases": 3.708166824594524e-07
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 5.706870375901723e-07,
+          "expected_if_active": 5.911094593152701,
+          "expected_purchases": 3.3733850622815995e-06
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 5.706870375901723e-07,
+          "expected_if_active": 13.747634975955624,
+          "expected_purchases": 7.845597078299155e-06
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 5.706870375901723e-07,
+          "expected_if_active": 27.96669467486075,
+          "expected_purchases": 1.596023013518513e-05
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 5.706870375901723e-07,
+          "expected_if_active": 45.09590813910372,
+          "expected_purchases": 2.573565022334364e-05
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.0658835696014073,
+          "expected_if_active": 0.9132582518878785,
+          "expected_purchases": 0.06016871360231461
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.0658835696014073,
+          "expected_if_active": 10.824675284933338,
+          "expected_purchases": 0.7131682475475392
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.0658835696014073,
+          "expected_if_active": 34.67246987578861,
+          "expected_purchases": 2.284346082314217
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.0658835696014073,
+          "expected_if_active": 97.84074443311928,
+          "expected_purchases": 6.446097495712919
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.0658835696014073,
+          "expected_if_active": 187.14508452679163,
+          "expected_purchases": 12.329786201982131
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.5263042027147715,
+          "expected_purchases": 0.5263042027147715
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.7041247306150489,
+          "expected_purchases": 1.7041247306150489
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.957326244190412,
+          "expected_purchases": 1.957326244190412
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.0920058425507553,
+          "expected_purchases": 2.0920058425507553
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.146051319054307,
+          "expected_purchases": 2.146051319054307
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.7585622323903225e-07,
+          "expected_if_active": 0.615370605419772,
+          "expected_purchases": 1.0821675056143786e-07
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.7585622323903225e-07,
+          "expected_if_active": 3.7791952653868908,
+          "expected_purchases": 6.645950062537708e-07
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.7585622323903225e-07,
+          "expected_if_active": 5.750769789475534,
+          "expected_purchases": 1.011308655894292e-06
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.7585622323903225e-07,
+          "expected_if_active": 7.072038252359346,
+          "expected_purchases": 1.2436619376618806e-06
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.7585622323903225e-07,
+          "expected_if_active": 7.632855973255344,
+          "expected_purchases": 1.3422852239841726e-06
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.03465026876006008,
+          "expected_if_active": 0.906101668644453,
+          "expected_purchases": 0.031396666342469196
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.03465026876006008,
+          "expected_if_active": 9.887706233919904,
+          "expected_purchases": 0.3426116784258461
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.03465026876006008,
+          "expected_if_active": 26.443242113645304,
+          "expected_purchases": 0.9162654461251489
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.03465026876006008,
+          "expected_if_active": 50.888048455845606,
+          "expected_purchases": 1.7632845556700105
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.03465026876006008,
+          "expected_if_active": 65.62664598498125,
+          "expected_purchases": 2.273980921200918
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.6429495516842461,
+          "expected_purchases": 0.6429495516842461
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 6.521630252836414,
+          "expected_purchases": 6.521630252836414
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 14.675578844657064,
+          "expected_purchases": 14.675578844657064
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.20596307119311,
+          "expected_purchases": 20.20596307119311
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.932366363205023,
+          "expected_purchases": 20.932366363205023
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.4203754200128882e-06,
+          "expected_if_active": 0.6628037879088444,
+          "expected_purchases": 9.414302086371582e-07
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.4203754200128882e-06,
+          "expected_if_active": 6.7796941375693835,
+          "expected_purchases": 9.629710908209029e-06
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.4203754200128882e-06,
+          "expected_if_active": 15.474388012011856,
+          "expected_purchases": 2.1979440372003743e-05
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.4203754200128882e-06,
+          "expected_if_active": 21.59112959804632,
+          "expected_purchases": 3.066750977137774e-05
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.4203754200128882e-06,
+          "expected_if_active": 22.42165771932805,
+          "expected_purchases": 3.1847171500475796e-05
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.034565792611685936,
+          "expected_if_active": 0.9058375556502164,
+          "expected_purchases": 0.0313109930884819
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.034565792611685936,
+          "expected_if_active": 9.790062590354237,
+          "expected_purchases": 0.3384012731536094
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.034565792611685936,
+          "expected_if_active": 24.694599518738556,
+          "expected_purchases": 0.8535884055933562
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.034565792611685936,
+          "expected_if_active": 38.355018415456954,
+          "expected_purchases": 1.32577161216608
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.034565792611685936,
+          "expected_if_active": 40.748370639696674,
+          "expected_purchases": 1.4084997287958674
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.5486700747308253,
+          "expected_purchases": 0.5486700747308253
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.020461038320834,
+          "expected_purchases": 3.020461038320834
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.13806542592,
+          "expected_purchases": 7.13806542592
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.800069037371063,
+          "expected_purchases": 20.800069037371063
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 53.852223779883076,
+          "expected_purchases": 53.852223779883076
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 7.440066756109388e-07,
+          "expected_if_active": 0.6589930489478721,
+          "expected_purchases": 4.90295227598423e-07
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 7.440066756109388e-07,
+          "expected_if_active": 6.943245416186998,
+          "expected_purchases": 5.165820940048178e-06
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 7.440066756109388e-07,
+          "expected_if_active": 21.14260548344176,
+          "expected_purchases": 1.573023961948911e-05
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 7.440066756109388e-07,
+          "expected_if_active": 70.12948752451042,
+          "expected_purchases": 5.2176806875409806e-05
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 7.440066756109388e-07,
+          "expected_if_active": 189.66041286956602,
+          "expected_purchases": 0.00014110861327408392
+        }
+      ]
+    },
+    {
+      "id": "grid_r100_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 100.0,
+        "alpha": 100.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.15085646311956555,
+          "expected_if_active": 0.9179186774865222,
+          "expected_purchases": 0.13847396511700594
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.15085646311956555,
+          "expected_if_active": 11.497240819024917,
+          "expected_purchases": 1.734433085591996
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.15085646311956555,
+          "expected_if_active": 42.010481262297006,
+          "expected_purchases": 6.337552617180908
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.15085646311956555,
+          "expected_if_active": 165.58716166352227,
+          "expected_purchases": 24.979893546566686
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.15085646311956555,
+          "expected_if_active": 485.3857412105519,
+          "expected_purchases": 73.2235761676926
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.7246707999357581,
+          "expected_purchases": 0.7246707999357581
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 5.05061181782565,
+          "expected_purchases": 5.05061181782565
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.885562367395407,
+          "expected_purchases": 9.885562367395407
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 17.836268845151363,
+          "expected_purchases": 17.836268845151363
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 27.16717464748412,
+          "expected_purchases": 27.16717464748412
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 4.972370006441666e-08,
+          "expected_if_active": 0.766740901852516,
+          "expected_purchases": 3.8125194630834836e-08
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 4.972370006441666e-08,
+          "expected_if_active": 6.672605871015306,
+          "expected_purchases": 3.3178665297843075e-07
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 4.972370006441666e-08,
+          "expected_if_active": 15.02230251932556,
+          "expected_purchases": 7.469644647478749e-07
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 4.972370006441666e-08,
+          "expected_if_active": 29.858907357875303,
+          "expected_purchases": 1.4846953537141952e-06
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 4.972370006441666e-08,
+          "expected_if_active": 47.62843931915165,
+          "expected_purchases": 2.368262231241766e-06
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.056669877299811,
+          "expected_if_active": 0.9440748457565469,
+          "expected_purchases": 0.053500605670861505
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.056669877299811,
+          "expected_if_active": 11.16078795219737,
+          "expected_purchases": 0.6324804838202338
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.056669877299811,
+          "expected_if_active": 35.57541849187534,
+          "expected_purchases": 2.016054600824003
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.056669877299811,
+          "expected_if_active": 99.6660610690881,
+          "expected_purchases": 5.6480634517406925
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.056669877299811,
+          "expected_if_active": 189.7984772614386,
+          "expected_purchases": 10.755856418096693
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.6089739315626171,
+          "expected_purchases": 0.6089739315626171
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.7519176057086265,
+          "expected_purchases": 1.7519176057086265
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.9797152058318508,
+          "expected_purchases": 1.9797152058318508
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1018810349288377,
+          "expected_purchases": 2.1018810349288377
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.150976647832016,
+          "expected_purchases": 2.150976647832016
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.5322266621031893e-08,
+          "expected_if_active": 0.7193304081480377,
+          "expected_purchases": 1.1021772302259926e-08
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.5322266621031893e-08,
+          "expected_if_active": 4.064964771562376,
+          "expected_purchases": 6.228447403498073e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.5322266621031893e-08,
+          "expected_if_active": 5.944238599551967,
+          "expected_purchases": 9.107920868136446e-08
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.5322266621031893e-08,
+          "expected_if_active": 7.166064094969466,
+          "expected_purchases": 1.0980034468652576e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.5322266621031893e-08,
+          "expected_if_active": 7.6806100354444995,
+          "expected_purchases": 1.1768435477525384e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.029665777525022415,
+          "expected_if_active": 0.9364507627665488,
+          "expected_purchases": 0.027780539991369983
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.029665777525022415,
+          "expected_if_active": 10.169102957678874,
+          "expected_purchases": 0.3016743459715489
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.029665777525022415,
+          "expected_if_active": 26.968495464857988,
+          "expected_purchases": 0.8000413866450531
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.029665777525022415,
+          "expected_if_active": 51.35987986064792,
+          "expected_purchases": 1.5236307696578606
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.029665777525022415,
+          "expected_if_active": 65.9076040784402,
+          "expected_purchases": 1.955200319798267
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.7720929579662931,
+          "expected_purchases": 0.7720929579662931
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.495595164264052,
+          "expected_purchases": 7.495595164264052
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 15.732277971962047,
+          "expected_purchases": 15.732277971962047
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.422922433771102,
+          "expected_purchases": 20.422922433771102
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.953277568917812,
+          "expected_purchases": 20.953277568917812
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.237567554426785e-07,
+          "expected_if_active": 0.7847713909931647,
+          "expected_purchases": 9.712076111355172e-08
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.237567554426785e-07,
+          "expected_if_active": 7.720591861322224,
+          "expected_purchases": 9.554753988543885e-07
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.237567554426785e-07,
+          "expected_if_active": 16.538375216881366,
+          "expected_purchases": 2.0467356571348424e-06
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.237567554426785e-07,
+          "expected_if_active": 21.82113542732625,
+          "expected_purchases": 2.7005129205611827e-06
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.237567554426785e-07,
+          "expected_if_active": 22.444265678731327,
+          "expected_purchases": 2.7776294986932553e-06
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.029593080869033322,
+          "expected_if_active": 0.9361679504459218,
+          "expected_purchases": 0.027704093864543342
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.029593080869033322,
+          "expected_if_active": 10.064021201898175,
+          "expected_purchases": 0.2978253932954386
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.029593080869033322,
+          "expected_if_active": 25.11769005283215,
+          "expected_purchases": 0.7433098329767756
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.029593080869033322,
+          "expected_if_active": 38.49729769998265,
+          "expected_purchases": 1.139253644074837
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.029593080869033322,
+          "expected_if_active": 40.76525802447754,
+          "expected_purchases": 1.2063695773653733
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.640669876899031,
+          "expected_purchases": 0.640669876899031
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.380028520807361,
+          "expected_purchases": 3.380028520807361
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 8.064777762951246,
+          "expected_purchases": 8.064777762951246
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 23.64380065474127,
+          "expected_purchases": 23.64380065474127
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 61.349528841897055,
+          "expected_purchases": 61.349528841897055
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 6.482497095689259e-08,
+          "expected_if_active": 0.7796243957182282,
+          "expected_purchases": 5.0539128809719076e-08
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 6.482497095689259e-08,
+          "expected_if_active": 8.028739786474416,
+          "expected_purchases": 5.20462823478652e-07
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 6.482497095689259e-08,
+          "expected_if_active": 24.15107660185899,
+          "expected_purchases": 1.565592839293197e-06
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 6.482497095689259e-08,
+          "expected_if_active": 79.53964772638751,
+          "expected_purchases": 5.156155353784539e-06
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 6.482497095689259e-08,
+          "expected_if_active": 214.5588502926287,
+          "expected_purchases": 1.3908771238763921e-05
+        }
+      ]
+    },
+    {
+      "id": "grid_r200_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.1314314691724866,
+          "expected_if_active": 0.9490409777800629,
+          "expected_purchases": 0.12473385001452687
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.1314314691724866,
+          "expected_if_active": 11.8745677986063,
+          "expected_purchases": 1.5606918915591261
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.1314314691724866,
+          "expected_if_active": 43.30271773738949,
+          "expected_purchases": 5.691339811386596
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.1314314691724866,
+          "expected_if_active": 170.16079737787973,
+          "expected_purchases": 22.364483594936537
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.1314314691724866,
+          "expected_if_active": 497.8779546729858,
+          "expected_purchases": 65.43683105126321
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.817422988533814,
+          "expected_purchases": 0.817422988533814
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 5.439645584324169,
+          "expected_purchases": 5.439645584324169
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 10.443837016079808,
+          "expected_purchases": 10.443837016079808
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 18.623810675378266,
+          "expected_purchases": 18.623810675378266
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 28.21065937627443,
+          "expected_purchases": 28.21065937627443
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 7.337174280114013e-09,
+          "expected_if_active": 0.8620933761615699,
+          "expected_purchases": 6.325329346629325e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 7.337174280114013e-09,
+          "expected_if_active": 7.25425799787853,
+          "expected_purchases": 5.322575520334572e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 7.337174280114013e-09,
+          "expected_if_active": 15.96897206811903,
+          "expected_purchases": 1.1716713113806202e-07
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 7.337174280114013e-09,
+          "expected_if_active": 31.250254097354244,
+          "expected_purchases": 2.2928856061013512e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 7.337174280114013e-09,
+          "expected_if_active": 49.486882056866285,
+          "expected_purchases": 3.6309387823067496e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.05007891302925998,
+          "expected_if_active": 0.9695199276413838,
+          "expected_purchases": 0.04855250413648729
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.05007891302925998,
+          "expected_if_active": 11.437044079992127,
+          "expected_purchases": 0.5727547357937384
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.05007891302925998,
+          "expected_if_active": 36.31194613700147,
+          "expected_purchases": 1.8184627925180694
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.05007891302925998,
+          "expected_if_active": 101.14270907046115,
+          "expected_purchases": 5.065116931083368
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.05007891302925998,
+          "expected_if_active": 191.9388870291826,
+          "expected_purchases": 9.612090830467393
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.6719795746728544,
+          "expected_purchases": 0.6719795746728544
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.782364553903822,
+          "expected_purchases": 1.782364553903822
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.9941692565110767,
+          "expected_purchases": 1.9941692565110767
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1082707531575684,
+          "expected_purchases": 2.1082707531575684
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1541648171313903,
+          "expected_purchases": 2.1541648171313903
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 2.260936678534407e-09,
+          "expected_if_active": 0.8026051213655687,
+          "expected_purchases": 1.8146393572749735e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 2.260936678534407e-09,
+          "expected_if_active": 4.264284955572293,
+          "expected_purchases": 9.641278263775861e-09
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 2.260936678534407e-09,
+          "expected_if_active": 6.073664218677714,
+          "expected_purchases": 1.3732170205110466e-08
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 2.260936678534407e-09,
+          "expected_if_active": 7.22821276854406,
+          "expected_purchases": 1.6342531368651998e-08
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 2.260936678534407e-09,
+          "expected_if_active": 7.712102562193,
+          "expected_purchases": 1.7436575551481334e-08
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.026128521140972884,
+          "expected_if_active": 0.961498759033209,
+          "expected_purchases": 0.025122540652418396
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.026128521140972884,
+          "expected_if_active": 10.399293093939006,
+          "expected_purchases": 0.27171814945615863
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.026128521140972884,
+          "expected_if_active": 27.391862084047116,
+          "expected_purchases": 0.7157088475536387
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.026128521140972884,
+          "expected_if_active": 51.734168031555974,
+          "expected_purchases": 1.3517373031231539
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.026128521140972884,
+          "expected_if_active": 66.12926376257501,
+          "expected_purchases": 1.7278598662574132
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.8778896506549216,
+          "expected_purchases": 0.8778896506549216
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 8.230022504605104,
+          "expected_purchases": 8.230022504605104
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 16.420139045030677,
+          "expected_purchases": 16.420139045030677
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.54165996728394,
+          "expected_purchases": 20.54165996728394
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.964020779295964,
+          "expected_purchases": 20.964020779295964
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.826141134212511e-08,
+          "expected_if_active": 0.8847893163677519,
+          "expected_purchases": 1.615750165730919e-08
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.826141134212511e-08,
+          "expected_if_active": 8.437424645078064,
+          "expected_purchases": 1.540792821119545e-07
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.826141134212511e-08,
+          "expected_if_active": 17.24761435830689,
+          "expected_purchases": 3.149657804673854e-07
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.826141134212511e-08,
+          "expected_if_active": 21.951347633634082,
+          "expected_purchases": 4.0086258865177663e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.826141134212511e-08,
+          "expected_if_active": 22.456304727262065,
+          "expected_purchases": 4.100838178486412e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.02606425977587593,
+          "expected_if_active": 0.9611999607813563,
+          "expected_purchases": 0.025052965474367025
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.02606425977587593,
+          "expected_if_active": 10.287842017940752,
+          "expected_purchases": 0.2681449868887794
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.02606425977587593,
+          "expected_if_active": 25.45558529078884,
+          "expected_purchases": 0.6634809877660865
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.02606425977587593,
+          "expected_if_active": 38.60651998857411,
+          "expected_purchases": 1.006250366024742
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.02606425977587593,
+          "expected_if_active": 40.77796544576493,
+          "expected_purchases": 1.0628474845101092
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.7124160352663794,
+          "expected_purchases": 0.7124160352663794
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.6616634252465836,
+          "expected_purchases": 3.6616634252465836
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 8.793866253093707,
+          "expected_purchases": 8.793866253093707
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 25.882966768703504,
+          "expected_purchases": 25.882966768703504
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 67.25381236450114,
+          "expected_purchases": 67.25381236450114
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 9.56550126238913e-09,
+          "expected_if_active": 0.8784410116865337,
+          "expected_purchases": 8.402728606221922e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 9.56550126238913e-09,
+          "expected_if_active": 8.894198809040684,
+          "expected_purchases": 8.507746993581858e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 9.56550126238913e-09,
+          "expected_if_active": 26.53436262406776,
+          "expected_purchases": 2.5381447917721117e-07
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 9.56550126238913e-09,
+          "expected_if_active": 86.98014874288357,
+          "expected_purchases": 8.320087226028471e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 9.56550126238913e-09,
+          "expected_if_active": 234.2385724421576,
+          "expected_purchases": 2.240609360395686e-06
+        }
+      ]
+    },
+    {
+      "id": "grid_r500_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 500.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.11722591786516777,
+          "expected_if_active": 0.9747458118443745,
+          "expected_purchases": 0.11426547247868492
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.11722591786516777,
+          "expected_if_active": 12.18565329419023,
+          "expected_purchases": 1.428474392198155
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.11722591786516777,
+          "expected_if_active": 44.36506718649816,
+          "expected_purchases": 5.200735722087083
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.11722591786516777,
+          "expected_if_active": 173.9097726461582,
+          "expected_purchases": 20.386732724168542
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.11722591786516777,
+          "expected_if_active": 508.1076533657839,
+          "expected_purchases": 59.56338604012053
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.8_b2.5_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.8733310238986548,
+          "expected_purchases": 0.8733310238986548
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 5.662126470225781,
+          "expected_purchases": 5.662126470225781
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 10.760405359287846,
+          "expected_purchases": 10.760405359287846
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 19.06938684486479,
+          "expected_purchases": 19.06938684486479
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 28.800796966850143,
+          "expected_purchases": 28.800796966850143
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.8_b2.5_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 2.362879187743776e-09,
+          "expected_if_active": 0.9200844742137616,
+          "expected_purchases": 2.1740484550858723e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 2.362879187743776e-09,
+          "expected_if_active": 7.592955995928089,
+          "expected_purchases": 1.7941237696232797e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 2.362879187743776e-09,
+          "expected_if_active": 16.51105772701279,
+          "expected_purchases": 3.901363467079457e-08
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 2.362879187743776e-09,
+          "expected_if_active": 32.04240708215864,
+          "expected_purchases": 7.571233681964642e-08
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 2.362879187743776e-09,
+          "expected_if_active": 50.543763016833445,
+          "expected_purchases": 1.1942880570272933e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.8_b2.5_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.04643632598509419,
+          "expected_if_active": 0.9851386782303646,
+          "expected_purchases": 0.04574622080283002
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.04643632598509419,
+          "expected_if_active": 11.60605192945239,
+          "expected_purchases": 0.5389424107959825
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.04643632598509419,
+          "expected_if_active": 36.76008717414379,
+          "expected_purchases": 1.7070033912590208
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.04643632598509419,
+          "expected_if_active": 102.03596249059844,
+          "expected_purchases": 4.7381752164162725
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.04643632598509419,
+          "expected_if_active": 193.2310894591696,
+          "expected_purchases": 8.972941860580898
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a1.5_b0.6_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.7084773612112363,
+          "expected_purchases": 0.7084773612112363
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.798224061394791,
+          "expected_purchases": 1.798224061394791
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.0017493285980077,
+          "expected_purchases": 2.0017493285980077
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1116258292527856,
+          "expected_purchases": 2.1116258292527856
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.1558392056400244,
+          "expected_purchases": 2.1558392056400244
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a1.5_b0.6_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 7.281168471913431e-10,
+          "expected_if_active": 0.8526127870869614,
+          "expected_purchases": 6.208017344087822e-10
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 7.281168471913431e-10,
+          "expected_if_active": 4.373541516554381,
+          "expected_purchases": 3.1844492600940208e-09
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 7.281168471913431e-10,
+          "expected_if_active": 6.142916533707237,
+          "expected_purchases": 4.4727610190824865e-09
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 7.281168471913431e-10,
+          "expected_if_active": 7.26124061987148,
+          "expected_purchases": 5.287031626838536e-09
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 7.281168471913431e-10,
+          "expected_if_active": 7.728817182501748,
+          "expected_purchases": 5.627481999441452e-09
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a1.5_b0.6_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.024183661511873785,
+          "expected_if_active": 0.9768688101318688,
+          "expected_purchases": 0.023624264645736016
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.024183661511873785,
+          "expected_if_active": 10.539633906316586,
+          "expected_purchases": 0.2548869388494284
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.024183661511873785,
+          "expected_if_active": 27.64725303796387,
+          "expected_purchases": 0.6686118092032425
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.024183661511873785,
+          "expected_if_active": 51.957431525586586,
+          "expected_purchases": 1.256520937041146
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.024183661511873785,
+          "expected_if_active": 66.26098387945841,
+          "expected_purchases": 1.6024332055845476
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a3_b40_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9424584544820696,
+          "expected_purchases": 0.9424584544820696
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 8.652520273976348,
+          "expected_purchases": 8.652520273976348
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 16.778640313939025,
+          "expected_purchases": 16.778640313939025
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.59731653674351,
+          "expected_purchases": 20.59731653674351
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 20.968878734710305,
+          "expected_purchases": 20.968878734710305
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a3_b40_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 5.880943735472747e-09,
+          "expected_if_active": 0.9458756281731975,
+          "expected_purchases": 5.562641350041515e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 5.880943735472747e-09,
+          "expected_if_active": 8.852786712279844,
+          "expected_purchases": 5.206274055705853e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 5.880943735472747e-09,
+          "expected_if_active": 17.623007338875595,
+          "expected_purchases": 1.0363991460975068e-07
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 5.880943735472747e-09,
+          "expected_if_active": 22.013615498948514,
+          "expected_purchases": 1.2946083416364703e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 5.880943735472747e-09,
+          "expected_if_active": 22.461861088189156,
+          "expected_purchases": 1.320969412536451e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a3_b40_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 3.0,
+        "b": 40.0
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.02412406491265223,
+          "expected_if_active": 0.9765599526234641,
+          "expected_purchases": 0.02355859568818503
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.02412406491265223,
+          "expected_if_active": 10.42417095729421,
+          "expected_purchases": 0.25147337683434967
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.02412406491265223,
+          "expected_if_active": 25.658041452717793,
+          "expected_purchases": 0.6189762575368858
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.02412406491265223,
+          "expected_if_active": 38.6701492274325,
+          "expected_purchases": 0.9328811901445301
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.02412406491265223,
+          "expected_if_active": 40.785266273216344,
+          "expected_purchases": 0.9839064110548769
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.3_b0.2_x0",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.7547177730680841,
+          "expected_purchases": 0.7547177730680841
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.828901407447529,
+          "expected_purchases": 3.828901407447529
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.227786914816711,
+          "expected_purchases": 9.227786914816711
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 27.21623500452642,
+          "expected_purchases": 27.21623500452642
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 70.7696952198005,
+          "expected_purchases": 70.7696952198005
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.3_b0.2_x3",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 3,
+        "tx": 30.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 3.0804943462553506e-09,
+          "expected_if_active": 0.9387525553904416,
+          "expected_purchases": 2.891821939413018e-09
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 3.0804943462553506e-09,
+          "expected_if_active": 9.413236354239244,
+          "expected_purchases": 2.8997421369199318e-08
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 3.0804943462553506e-09,
+          "expected_if_active": 27.95835141567749,
+          "expected_purchases": 8.612554346661479e-08
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 3.0804943462553506e-09,
+          "expected_if_active": 91.42093401400052,
+          "expected_purchases": 2.816216703595121e-07
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 3.0804943462553506e-09,
+          "expected_if_active": 245.98176345592557,
+          "expected_purchases": 7.577454316078997e-07
+        }
+      ]
+    },
+    {
+      "id": "grid_r2000_a0.3_b0.2_x40",
+      "note": "grid",
+      "parameters": {
+        "r": 2000.0,
+        "alpha": 2000.0,
+        "a": 0.3,
+        "b": 0.2
+      },
+      "history": {
+        "x": 40,
+        "tx": 45.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.10926103415218236,
+          "expected_if_active": 0.990527289841094,
+          "expected_purchases": 0.1082260360439964
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.10926103415218236,
+          "expected_if_active": 12.376394854955919,
+          "expected_purchases": 1.3522577009282328
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.10926103415218236,
+          "expected_if_active": 45.01511665407516,
+          "expected_purchases": 4.918398198105379
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.10926103415218236,
+          "expected_if_active": 176.1990254091523,
+          "expected_purchases": 19.25168773281064
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.10926103415218236,
+          "expected_if_active": 514.3499811408694,
+          "expected_purchases": 56.19841085560689
+        }
+      ]
+    },
+    {
+      "id": "rate_ten_x0",
+      "note": "ten purchases per week",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 20.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.104281273210846,
+          "expected_purchases": 2.104281273210846
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.34331701260178,
+          "expected_purchases": 9.34331701260178
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 15.833487332929106,
+          "expected_purchases": 15.833487332929106
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 26.15014649380948,
+          "expected_purchases": 26.15014649380948
+        }
+      ]
+    },
+    {
+      "id": "rate_ten_x400",
+      "note": "ten purchases per week",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 20.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 400,
+        "tx": 50.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 2.2904022687951025e-05,
+          "expected_if_active": 8.26518619217316,
+          "expected_purchases": 0.0001893060120656736
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 2.2904022687951025e-05,
+          "expected_if_active": 98.26042392925675,
+          "expected_purchases": 0.0022505589790033824
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 2.2904022687951025e-05,
+          "expected_if_active": 316.7029133228672,
+          "expected_purchases": 0.007253770712087137
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 2.2904022687951025e-05,
+          "expected_if_active": 903.1201830438329,
+          "expected_purchases": 0.020685085162382433
+        }
+      ]
+    },
+    {
+      "id": "homogeneous_a0.8_x0",
+      "note": "nearly homogeneous purchase rates",
+      "parameters": {
+        "r": 50000.0,
+        "alpha": 500000.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.1267001180759415,
+          "expected_purchases": 1.1267001180759415
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.3113608671270427,
+          "expected_purchases": 3.3113608671270427
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 8.086400430116386,
+          "expected_purchases": 8.086400430116386
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 14.125415701679655,
+          "expected_purchases": 14.125415701679655
+        }
+      ]
+    },
+    {
+      "id": "homogeneous_a0.8_x5",
+      "note": "nearly homogeneous purchase rates",
+      "parameters": {
+        "r": 50000.0,
+        "alpha": 500000.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 5,
+        "tx": 40.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 0.70990776500668,
+          "expected_if_active": 1.224824381160766,
+          "expected_purchases": 0.8695123389555293
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.70990776500668,
+          "expected_if_active": 4.21979257068332,
+          "expected_purchases": 2.9956635126455886
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.70990776500668,
+          "expected_if_active": 13.279046983986046,
+          "expected_purchases": 9.426898565820228
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.70990776500668,
+          "expected_if_active": 27.053655093989523,
+          "expected_purchases": 19.205599823035683
+        }
+      ]
+    },
+    {
+      "id": "homogeneous_a2_x0",
+      "note": "nearly homogeneous purchase rates",
+      "parameters": {
+        "r": 50000.0,
+        "alpha": 500000.0,
+        "a": 2.0,
+        "b": 3.0
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 1.0234740864338991,
+          "expected_purchases": 1.0234740864338991
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.410015411641035,
+          "expected_purchases": 2.410015411641035
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.5725506924356614,
+          "expected_purchases": 3.5725506924356614
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 3.8867992611491973,
+          "expected_purchases": 3.8867992611491973
+        }
+      ]
+    },
+    {
+      "id": "homogeneous_a2_x5",
+      "note": "nearly homogeneous purchase rates",
+      "parameters": {
+        "r": 50000.0,
+        "alpha": 500000.0,
+        "a": 2.0,
+        "b": 3.0
+      },
+      "history": {
+        "x": 5,
+        "tx": 40.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 0.5131852846748979,
+          "expected_if_active": 1.149000444999783,
+          "expected_purchases": 0.5896501204587979
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.5131852846748979,
+          "expected_if_active": 3.3810399695135085,
+          "expected_purchases": 1.7350999592519978
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.5131852846748979,
+          "expected_if_active": 6.832786503147653,
+          "expected_purchases": 3.5064854867406283
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.5131852846748979,
+          "expected_if_active": 8.35171225783733,
+          "expected_purchases": 4.285975832561084
+        }
+      ]
+    },
+    {
+      "id": "large_x",
+      "note": "large r and large x",
+      "parameters": {
+        "r": 500.0,
+        "alpha": 50.0,
+        "a": 1.5,
+        "b": 0.6
+      },
+      "history": {
+        "x": 1000,
+        "tx": 51.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.00025434754124543804,
+          "expected_if_active": 14.545873378132322,
+          "expected_purchases": 0.00369970712899543
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.00025434754124543804,
+          "expected_if_active": 494.67486398980435,
+          "expected_purchases": 0.1258193353717282
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.00025434754124543804,
+          "expected_if_active": 1090.2307118076997,
+          "expected_purchases": 0.27729750093855215
+        }
+      ]
+    },
+    {
+      "id": "ordinary_small_r_x0",
+      "note": "ordinary fitted magnitudes",
+      "parameters": {
+        "r": 0.243,
+        "alpha": 4.414,
+        "a": 0.793,
+        "b": 2.426
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 38.86,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.005595657889484052,
+          "expected_purchases": 0.005595657889484052
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.06992659460176553,
+          "expected_purchases": 0.06992659460176553
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.2520730222824589,
+          "expected_purchases": 0.2520730222824589
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9155490824561618,
+          "expected_purchases": 0.9155490824561618
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.2279285832336857,
+          "expected_purchases": 2.2279285832336857
+        }
+      ]
+    },
+    {
+      "id": "ordinary_small_r_x2",
+      "note": "ordinary fitted magnitudes",
+      "parameters": {
+        "r": 0.243,
+        "alpha": 4.414,
+        "a": 0.793,
+        "b": 2.426
+      },
+      "history": {
+        "x": 2,
+        "tx": 30.43,
+        "t": 38.86,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.726578570080673,
+          "expected_if_active": 0.05154015172450568,
+          "expected_purchases": 0.037447969741732264
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.726578570080673,
+          "expected_if_active": 0.6292640677469336,
+          "expected_purchases": 0.4572097865467146
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.726578570080673,
+          "expected_if_active": 2.145288714280441,
+          "expected_purchases": 1.5587208064320879
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.726578570080673,
+          "expected_if_active": 6.792186244832903,
+          "expected_purchases": 4.935056969492306
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.726578570080673,
+          "expected_if_active": 14.184152963458407,
+          "expected_purchases": 10.305901577995149
+        }
+      ]
+    },
+    {
+      "id": "ordinary_r5",
+      "note": "ordinary fitted magnitudes",
+      "parameters": {
+        "r": 5.0,
+        "alpha": 10.0,
+        "a": 2.0,
+        "b": 3.0
+      },
+      "history": {
+        "x": 4,
+        "tx": 20.0,
+        "t": 30.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 1.0,
+          "probability_active": 0.18384273629873626,
+          "expected_if_active": 0.21891731112433074,
+          "expected_purchases": 0.04024635750025874
+        },
+        {
+          "horizon": 13.0,
+          "probability_active": 0.18384273629873626,
+          "expected_if_active": 2.1473834104663583,
+          "expected_purchases": 0.39478084206264763
+        },
+        {
+          "horizon": 52.0,
+          "probability_active": 0.18384273629873626,
+          "expected_if_active": 4.767485822306238,
+          "expected_purchases": 0.8764676388382097
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 0.18384273629873626,
+          "expected_if_active": 7.0488888888888885,
+          "expected_purchases": 1.295887021199092
+        },
+        {
+          "horizon": 1040.0,
+          "probability_active": 0.18384273629873626,
+          "expected_if_active": 7.739368998628258,
+          "expected_purchases": 1.4228267739334295
+        }
+      ]
+    },
+    {
+      "id": "long_series",
+      "note": "either side of the 100000-term limit of the transformed series",
+      "parameters": {
+        "r": 0.243,
+        "alpha": 4.414,
+        "a": 2.3,
+        "b": 2.426
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 38.86,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 167000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.317674789215842,
+          "expected_purchases": 2.317674789215842
+        },
+        {
+          "horizon": 168000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 2.3184671014955076,
+          "expected_purchases": 2.3184671014955076
+        }
+      ]
+    },
+    {
+      "id": "near_one_a0.992188",
+      "note": "inside the near-one band at large r",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.9921875,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 4.448043167020263,
+          "expected_purchases": 4.448043167020263
+        },
+        {
+          "horizon": 104.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.426892564090004,
+          "expected_purchases": 9.426892564090004
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 11.758184578417932,
+          "expected_purchases": 11.758184578417932
+        }
+      ]
+    },
+    {
+      "id": "near_one_a1.00781",
+      "note": "inside the near-one band at large r",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 1.0078125,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 13.0,
+          "probability_active": 1.0,
+          "expected_if_active": 4.405078138658631,
+          "expected_purchases": 4.405078138658631
+        },
+        {
+          "horizon": 104.0,
+          "probability_active": 1.0,
+          "expected_if_active": 9.20429783037528,
+          "expected_purchases": 9.20429783037528
+        },
+        {
+          "horizon": 260.0,
+          "probability_active": 1.0,
+          "expected_if_active": 11.40193052240399,
+          "expected_purchases": 11.40193052240399
+        }
+      ]
+    },
+    {
+      "id": "guard_threshold",
+      "note": "both sides of the rounding guard",
+      "parameters": {
+        "r": 200.0,
+        "alpha": 200.0,
+        "a": 0.8,
+        "b": 2.5
+      },
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 52.0,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 24.0,
+          "probability_active": 1.0,
+          "expected_if_active": 6.9739866300432904,
+          "expected_purchases": 6.9739866300432904
+        },
+        {
+          "horizon": 25.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.114080351236081,
+          "expected_purchases": 7.114080351236081
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.250094855482065,
+          "expected_purchases": 7.250094855482065
+        },
+        {
+          "horizon": 27.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.382287035089678,
+          "expected_purchases": 7.382287035089678
+        },
+        {
+          "horizon": 28.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.5108895616283275,
+          "expected_purchases": 7.5108895616283275
+        },
+        {
+          "horizon": 29.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.636113872152758,
+          "expected_purchases": 7.636113872152758
+        },
+        {
+          "horizon": 30.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.758152706844221,
+          "expected_purchases": 7.758152706844221
+        }
+      ]
+    }
+  ]
+}

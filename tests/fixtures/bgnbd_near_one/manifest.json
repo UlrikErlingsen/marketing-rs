@@ -1,0 +1,45 @@
+{
+  "format": "bgnbd-near-one-reference-v2",
+  "source": "https://doi.org/10.1287/mksc.1040.0098",
+  "cases": 22,
+  "fixed_predictions": 88,
+  "native_calls_for_expected_answers": 0,
+  "files": {
+    "LICENSE-mpmath": {
+      "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7",
+      "bytes": 1537
+    },
+    "README.md": {
+      "sha256": "25c4ef5a79376cc4060acb5671b1527c8d7cfb48472073efe0a21a54c89b25a7",
+      "bytes": 1932
+    },
+    "expected.json": {
+      "sha256": "2af1ce619155cf4c6612a8c8b84993d6afb8cc22126c9fe525cd361aec7a34cc",
+      "bytes": 25723
+    },
+    "generate.py": {
+      "sha256": "b2ee8b481c208c31e93aa5979c5c324b0bd8c1a1de4f6e25f55881cdc87b57f1",
+      "bytes": 2018
+    },
+    "provenance.json": {
+      "sha256": "da640a72e28be40dd9518dade22548bc062235d727f8b9402b5af419f5a24a2c",
+      "bytes": 470
+    },
+    "requirements.txt": {
+      "sha256": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+      "bytes": 14
+    },
+    "runtime.json": {
+      "sha256": "df9495e699fe0c04d23d8533573816e245b1932480bd1797df9a3a566e85f08b",
+      "bytes": 231
+    },
+    "validate.py": {
+      "sha256": "412edb0bc07c0762fc965c39542c89509ea58091138167e7c74831a8801b7cfa",
+      "bytes": 1578
+    },
+    "validation.json": {
+      "sha256": "0d5864a09d54430745719d1b2e6cfcafaa544be5b89edc6ae9e860ea4db3030a",
+      "bytes": 213
+    }
+  }
+}

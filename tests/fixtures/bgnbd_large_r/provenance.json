@@ -1,0 +1,9 @@
+{
+  "source": "https://doi.org/10.1287/mksc.1040.0098",
+  "inputs": "Fixed synthetic constants, no RNG or seed",
+  "oracle": "mpmath 1.3.0 posterior integral at 60 and 90 digits in separate processes",
+  "validator": "Equation 10 with mpmath hyp2f1 at 80 digits",
+  "byte_identical_replays": true,
+  "native_calls_for_expected_answers": 0,
+  "expected_sha256": "4c8e1e24cf56b71baa8fc43c200014053423e0c80e5f769d6db23e654e7e4553"
+}

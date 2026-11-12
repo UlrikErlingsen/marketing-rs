@@ -1,0 +1,24 @@
+{
+  "generator": "tools/reference/rfm/generate_rfm.py",
+  "generator_sha256": "7b791b87d41034f0327c53a72ff275be34551960bf05ea99b24d464a01030045",
+  "python": "3.13.5",
+  "seed": 20261112,
+  "group_counts": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    255
+  ],
+  "population_rows": 300,
+  "edge_inputs": 16,
+  "cases": 204,
+  "case_rows": 11076,
+  "error_cases": 12,
+  "sha256": {
+    "cases.json": "a08af1c9b94edd852534b65e2bbfc68f7692a9865a94ae19dfdf42b4e379d36c",
+    "errors.json": "fab6aa89ac0decd08d23d81824ba36e81f5b9f5248cb7fb0e3a1a84713e3ca95",
+    "population.csv": "eed8e270e194e1e92d1fc8a6d622b3b7067b5f16499c3fc1136242ad11fa4045"
+  }
+}

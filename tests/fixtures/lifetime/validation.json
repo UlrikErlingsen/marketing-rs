@@ -1,0 +1,106 @@
+{
+  "fit_cases": [
+    {
+      "all_starts_max_loglikelihood_absolute_error": 9.807458093077752e-13,
+      "all_starts_max_parameter_absolute_error": 2.0727189334386161e-07,
+      "curve_absolute_errors": {
+        "churn_probability": 2.4516733706106843e-13,
+        "retention": 2.4516733706106843e-13,
+        "survival": 2.637276088787362e-13
+      },
+      "fixed_loglikelihood_absolute_errors": {
+        "boundary": 3.073933455929487e-13,
+        "finite_a": 1.2404966490776738e-13,
+        "finite_b": 1.0111667679214119e-11,
+        "unbounded": 4.1490764845425515e-13
+      },
+      "gradient_max_absolute_error_at_starts": 4.496741634820591e-15,
+      "loglikelihood_absolute_error": 9.807458093077752e-13,
+      "mean_duration_absolute_error": 5.013041786182506e-11,
+      "name": "synthetic_finite",
+      "negative_loglikelihood_curvature_eigenvalues": [
+        74.43405960481347,
+        2140.3339795912907
+      ],
+      "parameter_absolute_errors": {
+        "alpha": 2.8807054488273543e-12,
+        "beta": 1.3045647275259733e-11
+      },
+      "precision_decimal_digits": 60,
+      "score_max_absolute": 8.929802299589323e-46,
+      "stationary_alpha": 1.3577453018633039,
+      "stationary_beta": 3.8472210548590016,
+      "stationary_loglikelihood": -4831.790429657942
+    },
+    {
+      "all_starts_max_loglikelihood_absolute_error": 6.23116901064896e-13,
+      "all_starts_max_parameter_absolute_error": 7.446559315381668e-08,
+      "curve_absolute_errors": {
+        "churn_probability": 4.142542313073216e-12,
+        "retention": 7.561900693509533e-12,
+        "survival": 1.811361166112495e-11
+      },
+      "fixed_loglikelihood_absolute_errors": {
+        "boundary": 8.599694620805133e-13,
+        "finite_a": 4.637647453638769e-14,
+        "finite_b": 1.841043803823193e-11,
+        "unbounded": 2.1658757202687115e-13
+      },
+      "gradient_max_absolute_error_at_starts": 4.417216297714096e-15,
+      "loglikelihood_absolute_error": 2.863778007080322e-13,
+      "mean_duration_absolute_error": null,
+      "name": "synthetic_unbounded",
+      "negative_loglikelihood_curvature_eigenvalues": [
+        104.58884206569356,
+        1879.3436393795066
+      ],
+      "parameter_absolute_errors": {
+        "alpha": 9.20232084688603e-11,
+        "beta": 2.716177459509081e-10
+      },
+      "precision_decimal_digits": 60,
+      "score_max_absolute": 3.0860595173719346e-65,
+      "stationary_alpha": 0.7694215310089719,
+      "stationary_beta": 2.165185132787747,
+      "stationary_loglikelihood": -4752.9970779368805
+    }
+  ],
+  "fixed_cases": [
+    {
+      "curve_absolute_errors": {
+        "churn_probability": 5.551115123125783e-17,
+        "retention": 1.189524669241239e-15,
+        "survival": 1.5860328923216522e-16
+      },
+      "mean_duration_absolute_error": 0.0,
+      "name": "finite_a"
+    },
+    {
+      "curve_absolute_errors": {
+        "churn_probability": 3.532527805625498e-17,
+        "retention": 6.098408163433958e-16,
+        "survival": 1.7963451965471225e-16
+      },
+      "mean_duration_absolute_error": null,
+      "name": "unbounded"
+    },
+    {
+      "curve_absolute_errors": {
+        "churn_probability": 1.2334693019045396e-16,
+        "retention": 9.423254901639345e-16,
+        "survival": 7.367220688099032e-16
+      },
+      "mean_duration_absolute_error": null,
+      "name": "boundary"
+    },
+    {
+      "curve_absolute_errors": {
+        "churn_probability": 6.092629046774857e-17,
+        "retention": 3.9044076613789814e-14,
+        "survival": 1.1247653582812043e-16
+      },
+      "mean_duration_absolute_error": 1.468063503636571e-17,
+      "name": "finite_b"
+    }
+  ]
+}

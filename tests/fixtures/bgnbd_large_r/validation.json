@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks_before_manifest": 1257,
+  "independent_expression": "Fader, Hardie and Lee (2005) eq. 10 with mpmath hyp2f1",
+  "expected_replay_byte_identical": true,
+  "native_calls": 0
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "empty_dimensions",
+    "description": "All three columns are empty.",
+    "recency": [],
+    "frequency": [],
+    "monetary": [],
+    "groups": 5,
+    "nested": false,
+    "reason": "empty dimensions"
+  },
+  {
+    "id": "empty_dimensions_nested",
+    "description": "All three columns are empty.",
+    "recency": [],
+    "frequency": [],
+    "monetary": [],
+    "groups": 5,
+    "nested": true,
+    "reason": "empty dimensions"
+  },
+  {
+    "id": "unequal_lengths_frequency_short",
+    "description": "Frequency is one row shorter.",
+    "recency": ["1.0", "2.0", "3.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["1.0", "2.0", "3.0"],
+    "groups": 5,
+    "nested": false,
+    "reason": "unequal lengths"
+  },
+  {
+    "id": "unequal_lengths_monetary_long",
+    "description": "Monetary is one row longer.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["1.0", "2.0", "3.0"],
+    "groups": 5,
+    "nested": true,
+    "reason": "unequal lengths"
+  },
+  {
+    "id": "unequal_lengths_recency_empty",
+    "description": "Recency is empty, the others are not.",
+    "recency": [],
+    "frequency": ["1.0"],
+    "monetary": ["1.0"],
+    "groups": 5,
+    "nested": false,
+    "reason": "unequal lengths"
+  },
+  {
+    "id": "zero_groups",
+    "description": "Zero bands requested.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["1.0", "2.0"],
+    "groups": 0,
+    "nested": false,
+    "reason": "zero groups"
+  },
+  {
+    "id": "zero_groups_nested",
+    "description": "Zero bands requested.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["1.0", "2.0"],
+    "groups": 0,
+    "nested": true,
+    "reason": "zero groups"
+  },
+  {
+    "id": "no_usable_recency",
+    "description": "Every recency value is NaN.",
+    "recency": ["NaN", "NaN"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["1.0", "2.0"],
+    "groups": 5,
+    "nested": false,
+    "reason": "dimension with no usable value"
+  },
+  {
+    "id": "no_usable_frequency",
+    "description": "Every frequency value is NaN.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["NaN", "NaN"],
+    "monetary": ["1.0", "2.0"],
+    "groups": 5,
+    "nested": true,
+    "reason": "dimension with no usable value"
+  },
+  {
+    "id": "no_usable_monetary",
+    "description": "Every monetary value is NaN.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["NaN", "NaN"],
+    "groups": 3,
+    "nested": false,
+    "reason": "dimension with no usable value"
+  },
+  {
+    "id": "no_usable_monetary_nested",
+    "description": "Every monetary value is NaN.",
+    "recency": ["1.0", "2.0"],
+    "frequency": ["1.0", "2.0"],
+    "monetary": ["NaN", "NaN"],
+    "groups": 3,
+    "nested": true,
+    "reason": "dimension with no usable value"
+  },
+  {
+    "id": "single_row_all_nan",
+    "description": "One row, every value NaN.",
+    "recency": ["NaN"],
+    "frequency": ["NaN"],
+    "monetary": ["NaN"],
+    "groups": 1,
+    "nested": true,
+    "reason": "dimension with no usable value"
+  }
+]

@@ -1,0 +1,24 @@
+[package]
+name = "marketing"
+version = "0.2.2"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+description = "Marketing formulas and customer lifetime models, tested against independent answer keys"
+authors = ["Ulrik Øhrn Erlingsen"]
+documentation = "https://docs.rs/marketing"
+repository = "https://github.com/UlrikErlingsen/marketing-rs"
+keywords = ["marketing", "rfm", "clv", "customer-value", "analytics"]
+categories = ["science", "mathematics"]
+readme = "README.md"
+publish = true
+include = ["/src/**", "/examples/**", "/Cargo.toml", "/Cargo.lock", "/README.md", "/CONTRIBUTING.md", "/LICENSE-MIT", "/LICENSE-APACHE", "/CHANGELOG.md", "/licenses/**"]
+
+[dependencies]
+statrs = { version = "0.18.0", default-features = false }
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+csv = "1"
+sha2 = "0.10"

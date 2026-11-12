@@ -1,0 +1,961 @@
+{
+  "schema": "bgnbd-near-one-synthetic-posterior-integral-v1",
+  "input_semantics": "Each decimal JSON numeric input denotes its nearest binary64, integrated at its exact rational value. Offset labels are descriptive; a_hex pins actual a.",
+  "primary_source": "https://doi.org/10.1287/mksc.1040.0098",
+  "derivation": "Conditional active lambda posterior is Gamma(r+x,alpha+T), dropout posterior Beta(a,b+x). E future|active = integral (1-(1+p*h/(alpha+T))^-(r+x))/p times the beta posterior. Evaluate numerator with expm1/log1p. Multiply by posterior active probability.",
+  "method": "mpmath tanh-sinh posterior integral; no Rust or native evaluation",
+  "tolerances": {
+    "scalar": {
+      "absolute": 1e-12,
+      "relative": 1e-10
+    }
+  },
+  "cases": [
+    {
+      "id": "q_-0.0001_x_0",
+      "decimal_offset_label": "-0.0001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.9999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.fff2e48e8a71ep-1",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.4444444439482915e-10,
+          "expected_purchases": 4.4444444439482915e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193187057330029,
+          "expected_purchases": 0.9193187057330029
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.213058511933931,
+          "expected_purchases": 7.213058511933931
+        }
+      ]
+    },
+    {
+      "id": "q_-0.0001_x_3",
+      "decimal_offset_label": "-0.0001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.9999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.fff2e48e8a71ep-1",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.28568364591440604,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.28568364591440604,
+          "expected_if_active": 1.6565656563146832e-09,
+          "expected_purchases": 4.732537163925696e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.28568364591440604,
+          "expected_if_active": 3.1871982193583834,
+          "expected_purchases": 0.9105304075582058
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.28568364591440604,
+          "expected_if_active": 19.440897846820494,
+          "expected_purchases": 5.553946576729205
+        }
+      ]
+    },
+    {
+      "id": "q_0.0001_x_0",
+      "decimal_offset_label": "0.0001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.00068db8bac71p+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.4444444439482186e-10,
+          "expected_purchases": 4.4444444439482186e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9192884388741407,
+          "expected_purchases": 0.9192884388741407
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.211329773031338,
+          "expected_purchases": 7.211329773031338
+        }
+      ]
+    },
+    {
+      "id": "q_0.0001_x_3",
+      "decimal_offset_label": "0.0001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.00068db8bac71p+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.28564283396366547,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.28564283396366547,
+          "expected_if_active": 1.6565656563146404e-09,
+          "expected_purchases": 4.731861087165933e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.28564283396366547,
+          "expected_if_active": 3.187039249338326,
+          "expected_purchases": 0.9103549231344324
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.28564283396366547,
+          "expected_if_active": 19.434798073644718,
+          "expected_purchases": 5.5514107992674635
+        }
+      ]
+    },
+    {
+      "id": "q_-0.000001_x_0",
+      "decimal_offset_label": "-0.000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffde7210be9p-1",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.4444444439482553e-10,
+          "expected_purchases": 4.4444444439482553e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193037230765219,
+          "expected_purchases": 0.9193037230765219
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212202697135383,
+          "expected_purchases": 7.212202697135383
+        }
+      ]
+    },
+    {
+      "id": "q_-0.000001_x_3",
+      "decimal_offset_label": "-0.000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffde7210be9p-1",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.28566344254126036,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.28566344254126036,
+          "expected_if_active": 1.6565656563146621e-09,
+          "expected_purchases": 4.732202481784687e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.28566344254126036,
+          "expected_if_active": 3.187119526799399,
+          "expected_purchases": 0.9104435358159889
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.28566344254126036,
+          "expected_if_active": 19.43787811097066,
+          "expected_purchases": 5.55269117687729
+        }
+      ]
+    },
+    {
+      "id": "q_0.000001_x_0",
+      "decimal_offset_label": "0.000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.000010c6f7a0bp+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193034204079336,
+          "expected_purchases": 0.9193034204079336
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212185409746506,
+          "expected_purchases": 7.212185409746506
+        }
+      ]
+    },
+    {
+      "id": "q_0.000001_x_3",
+      "decimal_offset_label": "0.000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.000010c6f7a0bp+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.285663034421755,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.285663034421755,
+          "expected_if_active": 1.6565656563146617e-09,
+          "expected_purchases": 4.732195721017124e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.285663034421755,
+          "expected_if_active": 3.1871179370991998,
+          "expected_purchases": 0.9104417809717615
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.285663034421755,
+          "expected_if_active": 19.43781711323952,
+          "expected_purchases": 5.552665819103121
+        }
+      ]
+    },
+    {
+      "id": "q_-0.00000001_x_0",
+      "decimal_offset_label": "-0.00000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.99999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffffaa19c47p-1",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035732555145,
+          "expected_purchases": 0.9193035732555145
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212194139868984,
+          "expected_purchases": 7.212194139868984
+        }
+      ]
+    },
+    {
+      "id": "q_-0.00000001_x_3",
+      "decimal_offset_label": "-0.00000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.99999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffffaa19c47p-1",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.28566324052195946,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.28566324052195946,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.732199135202329e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.28566324052195946,
+          "expected_if_active": 3.1871187398975604,
+          "expected_purchases": 0.9104426671674011
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.28566324052195946,
+          "expected_if_active": 19.437847917058935,
+          "expected_purchases": 5.552678624760075
+        }
+      ]
+    },
+    {
+      "id": "q_0.00000001_x_0",
+      "decimal_offset_label": "0.00000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.00000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000002af31dcp+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035702288286,
+          "expected_purchases": 0.9193035702288286
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212193966995096,
+          "expected_purchases": 7.212193966995096
+        }
+      ]
+    },
+    {
+      "id": "q_0.00000001_x_3",
+      "decimal_offset_label": "0.00000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.00000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000002af31dcp+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.2856632364407644,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.2856632364407644,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.732199067594653e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.2856632364407644,
+          "expected_if_active": 3.1871187240005585,
+          "expected_purchases": 0.9104426496189588
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.2856632364407644,
+          "expected_if_active": 19.437847307081622,
+          "expected_purchases": 5.552678371182333
+        }
+      ]
+    },
+    {
+      "id": "q_-0.0000000001_x_0",
+      "decimal_offset_label": "-0.0000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.9999999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffffff24190p-1",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.919303571757305,
+          "expected_purchases": 0.919303571757305
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.2121940542964085,
+          "expected_purchases": 7.2121940542964085
+        }
+      ]
+    },
+    {
+      "id": "q_-0.0000000001_x_3",
+      "decimal_offset_label": "-0.0000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.9999999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.ffffffff24190p-1",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.2856632385017679,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.2856632385017679,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.732199101736529e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.2856632385017679,
+          "expected_if_active": 3.1871187320285443,
+          "expected_purchases": 0.9104426584809221
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.2856632385017679,
+          "expected_if_active": 19.43784761512016,
+          "expected_purchases": 5.55267849923909
+        }
+      ]
+    },
+    {
+      "id": "q_0.0000000001_x_0",
+      "decimal_offset_label": "0.0000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0000000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.000000006df38p+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035717270381,
+          "expected_purchases": 0.9193035717270381
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.2121940525676695,
+          "expected_purchases": 7.2121940525676695
+        }
+      ]
+    },
+    {
+      "id": "q_0.0000000001_x_3",
+      "decimal_offset_label": "0.0000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0000000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.000000006df38p+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.2856632384609559,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.2856632384609559,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.732199101060452e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.2856632384609559,
+          "expected_if_active": 3.187118731869574,
+          "expected_purchases": 0.9104426583054377
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.2856632384609559,
+          "expected_if_active": 19.437847609020388,
+          "expected_purchases": 5.5526784967033125
+        }
+      ]
+    },
+    {
+      "id": "q_-0.000000000001_x_0",
+      "decimal_offset_label": "-0.000000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.999999999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.fffffffffdcd1p-1",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035717423229,
+          "expected_purchases": 0.9193035717423229
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212194053440682,
+          "expected_purchases": 7.212194053440682
+        }
+      ]
+    },
+    {
+      "id": "q_-0.000000000001_x_3",
+      "decimal_offset_label": "-0.000000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 0.999999999999,
+        "b": 2.8
+      },
+      "a_hex": "0x1.fffffffffdcd1p-1",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.28566323848156594,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.28566323848156594,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.732199101401871e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.28566323848156594,
+          "expected_if_active": 3.187118731949854,
+          "expected_purchases": 0.9104426583940572
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.28566323848156594,
+          "expected_if_active": 19.43784761210077,
+          "expected_purchases": 5.55267849798388
+        }
+      ]
+    },
+    {
+      "id": "q_0.000000000001_x_0",
+      "decimal_offset_label": "0.000000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.000000000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000000001198p+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035717420202,
+          "expected_purchases": 0.9193035717420202
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212194053423394,
+          "expected_purchases": 7.212194053423394
+        }
+      ]
+    },
+    {
+      "id": "q_0.000000000001_x_3",
+      "decimal_offset_label": "0.000000000001",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.000000000001,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000000001198p+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.2856632384811578,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.2856632384811578,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.73219910139511e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.2856632384811578,
+          "expected_if_active": 3.187118731948264,
+          "expected_purchases": 0.9104426583923023
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.2856632384811578,
+          "expected_if_active": 19.43784761203977,
+          "expected_purchases": 5.552678497958522
+        }
+      ]
+    },
+    {
+      "id": "q_0_x_0",
+      "decimal_offset_label": "0",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000000000000p+0",
+      "history": {
+        "x": 0,
+        "tx": 0.0,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 1.0,
+          "expected_if_active": 4.444444443948255e-10,
+          "expected_purchases": 4.444444443948255e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 1.0,
+          "expected_if_active": 0.9193035717421716,
+          "expected_purchases": 0.9193035717421716
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 1.0,
+          "expected_if_active": 7.212194053432039,
+          "expected_purchases": 7.212194053432039
+        }
+      ]
+    },
+    {
+      "id": "q_0_x_3",
+      "decimal_offset_label": "0",
+      "parameters": {
+        "r": 1.1,
+        "alpha": 5.25,
+        "a": 1.0,
+        "b": 2.8
+      },
+      "a_hex": "0x1.0000000000000p+0",
+      "history": {
+        "x": 3,
+        "tx": 8.25,
+        "t": 19.5,
+        "weight": 1.0
+      },
+      "predictions": [
+        {
+          "horizon": 0.0,
+          "probability_active": 0.2856632384813619,
+          "expected_if_active": 0.0,
+          "expected_purchases": 0.0
+        },
+        {
+          "horizon": 1e-08,
+          "probability_active": 0.2856632384813619,
+          "expected_if_active": 1.656565656314662e-09,
+          "expected_purchases": 4.73219910139849e-10
+        },
+        {
+          "horizon": 26.0,
+          "probability_active": 0.2856632384813619,
+          "expected_if_active": 3.187118731949059,
+          "expected_purchases": 0.9104426583931798
+        },
+        {
+          "horizon": 1000.0,
+          "probability_active": 0.2856632384813619,
+          "expected_if_active": 19.437847612070275,
+          "expected_purchases": 5.552678497971201
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "bgbb.json": "389c71588aad9392eec94632ca4b9db490fad0bf3a7219058c74d82dce5713e0",
+    "bgnbd.json": "f0fe7a52dcd4baa922b5f37f35b6f752683d361465030706c7a4cd01625b42be",
+    "provenance.json": "4093ab00fa584962ae97c2587692e67cccd85e21da41c7d307771663ffa280d2",
+    "sbg.json": "ce77c73280f6e76da2cfa08805e354c4e43dc3a1dd3d1ae0541569e998ce8bc5",
+    "validation.json": "aa5943e84961f8e9c5a3fbfafa83459db0fa938a2b10f3f467a64125fcef5df0"
+  },
+  "generators": {
+    "tools/reference/lifetime/generate.py": "e216ab0e69021a989aa62a641ee0dba791ececb3fc618860bf5fc1fcfb29961f",
+    "tools/reference/sbg/generate_sbg.py": "35f6aaaa230af14b44f6db10cb798a3a8c7fca4307d8decc39ab8c2e0466f26d"
+  },
+  "note": "Model sources, independent implementation versions, generation seeds and comparison tolerances are recorded in each fixture. No answer is derived from this crate's code.",
+  "source_identifier": "independently generated synthetic reference keys"
+}

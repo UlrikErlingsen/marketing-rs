@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks_before_manifest": 264,
+  "independent_expression": "Euler-transformed hypergeometric, analytic derivative at a=1",
+  "expected_replay_byte_identical": true,
+  "native_calls": 0
+}

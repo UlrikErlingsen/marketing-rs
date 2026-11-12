@@ -1,0 +1,9169 @@
+{
+  "fit_case": {
+    "diagnostics": {
+      "finite_difference_rule": "five-point central difference",
+      "finite_difference_step": 0.0001,
+      "frequency_counts": {
+        "0": 464,
+        "1": 201,
+        "2": 132,
+        "3": 98,
+        "4": 58,
+        "5": 18,
+        "6": 20,
+        "7": 7,
+        "8": 2
+      },
+      "likelihood_check": {
+        "max_abs_row_log_likelihood_difference": 3.228350919926015e-11,
+        "method": "finite-state beta quadrature",
+        "total_library_minus_forward_log_likelihood": 2.102292562256025e-09
+      },
+      "log_parameter_gradient": [
+        -1.135758154191535e-09,
+        1.7226960598767012e-09,
+        1.1786867778103745e-09,
+        -6.195044477408372e-10
+      ],
+      "max_successful_relative_parameter_spread": 6.295420573732002e-08,
+      "objective": "unpenalized mean negative log likelihood in original time units",
+      "optimizer": "scipy.optimize.minimize BFGS with autograd.value_and_grad",
+      "optimizer_runs": [
+        {
+          "function_evaluations": 29,
+          "gradient_evaluations": 29,
+          "initial_parameters": {
+            "alpha": 1.8,
+            "beta": 2.4,
+            "delta": 4.1,
+            "gamma": 1.2
+          },
+          "iterations": 28,
+          "log_parameter_gradient": [
+            -1.1258353839437401e-09,
+            1.721382473329707e-09,
+            1.173611683408708e-09,
+            -6.109293953994877e-10
+          ],
+          "message": "Optimization terminated successfully.",
+          "parameters": {
+            "alpha": 1.6691692182018285,
+            "beta": 2.2635859570186425,
+            "delta": 3.195813840576654,
+            "gamma": 1.0347941650468333
+          },
+          "status": 0,
+          "success": true,
+          "total_log_likelihood": -2593.1656793678385
+        },
+        {
+          "function_evaluations": 29,
+          "gradient_evaluations": 29,
+          "initial_parameters": {
+            "alpha": 2.311245750037935,
+            "beta": 1.9649538073871564,
+            "delta": 3.528902703342737,
+            "gamma": 1.3942010912739398
+          },
+          "iterations": 28,
+          "log_parameter_gradient": [
+            -1.6205420397718814e-09,
+            1.1220602176550276e-09,
+            -5.704538711973228e-10,
+            1.7988012188113865e-10
+          ],
+          "message": "Optimization terminated successfully.",
+          "parameters": {
+            "alpha": 1.6691691131206061,
+            "beta": 2.263585851515969,
+            "delta": 3.1958138445108832,
+            "gamma": 1.0347941451752438
+          },
+          "status": 0,
+          "success": true,
+          "total_log_likelihood": -2593.165679367841
+        },
+        {
+          "function_evaluations": 29,
+          "gradient_evaluations": 29,
+          "initial_parameters": {
+            "alpha": 1.4737153555403675,
+            "beta": 2.931366619584407,
+            "delta": 5.26450420841974,
+            "gamma": 1.0328495717100694
+          },
+          "iterations": 28,
+          "log_parameter_gradient": [
+            -1.9365997833512457e-09,
+            3.2682818932559985e-09,
+            -2.0605529199415974e-09,
+            1.6915986570390508e-09
+          ],
+          "message": "Optimization terminated successfully.",
+          "parameters": {
+            "alpha": 1.669169155539447,
+            "beta": 2.263585924277993,
+            "delta": 3.195814000616078,
+            "gamma": 1.0347941786687567
+          },
+          "status": 0,
+          "success": true,
+          "total_log_likelihood": -2593.16567936784
+        }
+      ],
+      "parameter_profiles": [
+        {
+          "log_parameter_offset": 0.01,
+          "parameter": "alpha",
+          "total_negative_log_likelihood_increase": [
+            0.0130219074994109,
+            0.013010890901998806
+          ]
+        },
+        {
+          "log_parameter_offset": 0.01,
+          "parameter": "beta",
+          "total_negative_log_likelihood_increase": [
+            0.015788420812956616,
+            0.015843783132574174
+          ]
+        },
+        {
+          "log_parameter_offset": 0.01,
+          "parameter": "gamma",
+          "total_negative_log_likelihood_increase": [
+            0.015471211120665629,
+            0.015572809877184568
+          ]
+        },
+        {
+          "log_parameter_offset": 0.01,
+          "parameter": "delta",
+          "total_negative_log_likelihood_increase": [
+            0.009254811657477546,
+            0.009233573551981067
+          ]
+        }
+      ],
+      "predicted_purchases": [
+        {
+          "horizon": 0,
+          "mean_expected_purchases": 0.0,
+          "total_expected_purchases": 0.0
+        },
+        {
+          "horizon": 2,
+          "mean_expected_purchases": 0.2537902066509042,
+          "total_expected_purchases": 253.79020665090417
+        },
+        {
+          "horizon": 6,
+          "mean_expected_purchases": 0.6444492798902964,
+          "total_expected_purchases": 644.4492798902965
+        }
+      ],
+      "successful_total_log_likelihood_spread": 2.7284841053187847e-12,
+      "unique_summary_count": 68
+    },
+    "expected": {
+      "converged": true,
+      "log_likelihood": -2593.165679367839,
+      "parameters": {
+        "alpha": 1.6691692182018285,
+        "beta": 2.2635859570186425,
+        "delta": 3.195813840576654,
+        "gamma": 1.0347941650468333
+      }
+    },
+    "generation": {
+      "algorithm": "Bernoulli purchases with dropout before each opportunity",
+      "bit_generator": "numpy.random.PCG64",
+      "observation_lengths": [
+        4,
+        6,
+        8
+      ],
+      "seed": 2026110902,
+      "true_parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    "history_count": 1000,
+    "rows": [
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 8
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 8
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 7
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 5
+      },
+      {
+        "n": 6,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      {
+        "n": 8,
+        "tx": 7,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 8,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 3,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 4,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 8,
+        "tx": 5,
+        "weight": 1,
+        "x": 3
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 3,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 4
+      },
+      {
+        "n": 4,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 6,
+        "tx": 2,
+        "weight": 1,
+        "x": 2
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 4,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      {
+        "n": 8,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      }
+    ]
+  },
+  "fixed_cases": [
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -0.40277331644239206,
+        "probability_alive": 0.5353302611366799
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p0_h0_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.4027733164424533,
+          "probability_alive": 0.5353302611367116
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 6.122879980807738e-14,
+          "probability_alive": -3.164135620181696e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.18530662885500865,
+        "log_likelihood": -0.40277331644239206,
+        "probability_alive": 0.5353302611366799
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p0_h0_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.18530662885501573,
+          "log_likelihood": -0.4027733164424533,
+          "probability_alive": 0.5353302611367116
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -7.077671781985373e-15,
+          "log_likelihood": 6.122879980807738e-14,
+          "probability_alive": -3.164135620181696e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.6899024047752066,
+        "log_likelihood": -0.40277331644239206,
+        "probability_alive": 0.5353302611366799
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p0_h0_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.689902404775236,
+          "log_likelihood": -0.4027733164424533,
+          "probability_alive": 0.5353302611367116
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.942091015256665e-14,
+          "log_likelihood": 6.122879980807738e-14,
+          "probability_alive": -3.164135620181696e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.182615002356698,
+        "log_likelihood": -0.40277331644239206,
+        "probability_alive": 0.5353302611366799
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p0_h0_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.1826150023567614,
+          "log_likelihood": -0.4027733164424533,
+          "probability_alive": 0.5353302611367116
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -6.350475700855895e-14,
+          "log_likelihood": 6.122879980807738e-14,
+          "probability_alive": -3.164135620181696e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -0.8423960191140574,
+        "probability_alive": 0.08924661337461827
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p0_h1_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.8423960191141497,
+          "probability_alive": 0.08924661337462558
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 9.237055564881302e-14,
+          "probability_alive": -7.313594174718219e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.015749402360227958,
+        "log_likelihood": -0.8423960191140574,
+        "probability_alive": 0.08924661337461827
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p0_h1_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.015749402360228062,
+          "log_likelihood": -0.8423960191141497,
+          "probability_alive": 0.08924661337462558
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.0408340855860843e-16,
+          "log_likelihood": 9.237055564881302e-14,
+          "probability_alive": -7.313594174718219e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.06565460031666256,
+        "log_likelihood": -0.8423960191140574,
+        "probability_alive": 0.08924661337461827
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p0_h1_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0656546003166661,
+          "log_likelihood": -0.8423960191141497,
+          "probability_alive": 0.08924661337462558
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -3.5388358909926865e-15,
+          "log_likelihood": 9.237055564881302e-14,
+          "probability_alive": -7.313594174718219e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.12423110354209285,
+        "log_likelihood": -0.8423960191140574,
+        "probability_alive": 0.08924661337461827
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p0_h1_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.12423110354211073,
+          "log_likelihood": -0.8423960191141477,
+          "probability_alive": 0.08924661337462528
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.787459069646502e-14,
+          "log_likelihood": 9.037215420448774e-14,
+          "probability_alive": -7.008282842946301e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -2.225710781900818,
+        "probability_alive": 0.08657619576031056
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 0,
+      "id": "p0_h2_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -2.225710781901194,
+          "probability_alive": 0.08657619576034198
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 3.7569947153315297e-13,
+          "probability_alive": -3.141931159689193e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.02376601452243991,
+        "log_likelihood": -2.225710781900818,
+        "probability_alive": 0.08657619576031056
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 1,
+      "id": "p0_h2_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.02376601452244682,
+          "log_likelihood": -2.225710781901194,
+          "probability_alive": 0.08657619576034198
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -6.9111383282915995e-15,
+          "log_likelihood": 3.7569947153315297e-13,
+          "probability_alive": -3.141931159689193e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.09907348538704842,
+        "log_likelihood": -2.225710781900818,
+        "probability_alive": 0.08657619576031056
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 5,
+      "id": "p0_h2_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.09907348538708198,
+          "log_likelihood": -2.225710781901194,
+          "probability_alive": 0.08657619576034198
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -3.3556490919295356e-14,
+          "log_likelihood": 3.7569947153315297e-13,
+          "probability_alive": -3.141931159689193e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.18746604749752424,
+        "log_likelihood": -2.225710781900818,
+        "probability_alive": 0.08657619576031056
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 12,
+      "id": "p0_h2_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.18746604749760454,
+          "log_likelihood": -2.225710781901193,
+          "probability_alive": 0.0865761957603417
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -8.029688025601445e-14,
+          "log_likelihood": 3.7481129311345285e-13,
+          "probability_alive": -3.114175584073564e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -4.823201609985353,
+        "probability_alive": 0.5086891674035167
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 0,
+      "id": "p0_h3_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -4.823201609990433,
+          "probability_alive": 0.5086891674060957
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 5.080380560684716e-12,
+          "probability_alive": -2.5790480862042386e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.18951165060132388,
+        "log_likelihood": -4.823201609985353,
+        "probability_alive": 0.5086891674035167
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 1,
+      "id": "p0_h3_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.1895116506022709,
+          "log_likelihood": -4.823201609990433,
+          "probability_alive": 0.5086891674060957
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -9.470202400052585e-13,
+          "log_likelihood": 5.080380560684716e-12,
+          "probability_alive": -2.5790480862042386e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.790018020429877,
+        "log_likelihood": -4.823201609985353,
+        "probability_alive": 0.5086891674035167
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 5,
+      "id": "p0_h3_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.7900180204338616,
+          "log_likelihood": -4.823201609990433,
+          "probability_alive": 0.5086891674060957
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -3.984590435379687e-12,
+          "log_likelihood": 5.080380560684716e-12,
+          "probability_alive": -2.5790480862042386e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.4948657066340405,
+        "log_likelihood": -4.823201609985353,
+        "probability_alive": 0.5086891674035167
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 12,
+      "id": "p0_h3_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.4948657066417166,
+          "log_likelihood": -4.823201609990434,
+          "probability_alive": 0.5086891674060935
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -7.676081992258332e-12,
+          "log_likelihood": 5.0812687391044165e-12,
+          "probability_alive": -2.5768276401549883e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -5.738250316985423,
+        "probability_alive": 0.8938053097231866
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 0,
+      "id": "p0_h4_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -5.738250316998105,
+          "probability_alive": 0.8938053097345121
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 1.2682299654898088e-11,
+          "probability_alive": -1.1325496096503684e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.4206142633991772,
+        "log_likelihood": -5.738250316985423,
+        "probability_alive": 0.8938053097231866
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 1,
+      "id": "p0_h4_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.4206142634044765,
+          "log_likelihood": -5.738250316998105,
+          "probability_alive": 0.8938053097345121
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -5.299316541140797e-12,
+          "log_likelihood": 1.2682299654898088e-11,
+          "probability_alive": -1.1325496096503684e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.753416461103144,
+        "log_likelihood": -5.738250316985423,
+        "probability_alive": 0.8938053097231866
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 5,
+      "id": "p0_h4_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.753416461125317,
+          "log_likelihood": -5.738250316998105,
+          "probability_alive": 0.8938053097345121
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.2172930158603776e-11,
+          "log_likelihood": 1.2682299654898088e-11,
+          "probability_alive": -1.1325496096503684e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 3.3178004417221567,
+        "log_likelihood": -5.738250316985423,
+        "probability_alive": 0.8938053097231866
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 12,
+      "id": "p0_h4_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 3.3178004417644225,
+          "log_likelihood": -5.7382503169981085,
+          "probability_alive": 0.8938053097345123
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -4.226574645826986e-11,
+          "log_likelihood": 1.2685852368576889e-11,
+          "probability_alive": -1.132571814110861e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -4.075702579247643,
+        "probability_alive": 0.8938053097323643
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 0,
+      "id": "p0_h5_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -4.075702579250056,
+          "probability_alive": 0.8938053097345117
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 2.41229258790554e-12,
+          "probability_alive": -2.1473933742299778e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.6834981780306799,
+        "log_likelihood": -4.075702579247643,
+        "probability_alive": 0.8938053097323643
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 1,
+      "id": "p0_h5_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.6834981780322736,
+          "log_likelihood": -4.075702579250056,
+          "probability_alive": 0.8938053097345117
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.5937251518494122e-12,
+          "log_likelihood": 2.41229258790554e-12,
+          "probability_alive": -2.1473933742299778e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 2.8493017493218606,
+        "log_likelihood": -4.075702579247643,
+        "probability_alive": 0.8938053097323643
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 5,
+      "id": "p0_h5_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 2.8493017493286397,
+          "log_likelihood": -4.075702579250056,
+          "probability_alive": 0.8938053097345117
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -6.779021788361206e-12,
+          "log_likelihood": 2.41229258790554e-12,
+          "probability_alive": -2.1473933742299778e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 5.3914257178538545,
+        "log_likelihood": -4.075702579247643,
+        "probability_alive": 0.8938053097323643
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 12,
+      "id": "p0_h5_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 5.3914257178671905,
+          "log_likelihood": -4.07570257925006,
+          "probability_alive": 0.8938053097345118
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.333599897179738e-11,
+          "log_likelihood": 2.4167334800040408e-12,
+          "probability_alive": -2.1475043965324403e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 1.8,
+        "beta": 2.4,
+        "delta": 4.1,
+        "gamma": 1.2
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -0.19845093872383401,
+        "probability_alive": 0.6384823848238451
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p1_h0_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.19845093872383954,
+          "probability_alive": 0.6384823848238419
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 5.523359547510154e-15,
+          "probability_alive": 3.219646771412954e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.11492682926829124,
+        "log_likelihood": -0.19845093872383401,
+        "probability_alive": 0.6384823848238451
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p1_h0_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.11492682926829309,
+          "log_likelihood": -0.19845093872383954,
+          "probability_alive": 0.6384823848238419
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.8457457784393227e-15,
+          "log_likelihood": 5.523359547510154e-15,
+          "probability_alive": 3.219646771412954e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.4603325190243901,
+        "log_likelihood": -0.19845093872383401,
+        "probability_alive": 0.6384823848238451
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p1_h0_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.4603325190243885,
+          "log_likelihood": -0.19845093872383954,
+          "probability_alive": 0.6384823848238419
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 1.609823385706477e-15,
+          "log_likelihood": 5.523359547510154e-15,
+          "probability_alive": 3.219646771412954e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.866008463491834,
+        "log_likelihood": -0.19845093872383401,
+        "probability_alive": 0.6384823848238451
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p1_h0_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.8660084634918128,
+          "log_likelihood": -0.19845093872383954,
+          "probability_alive": 0.6384823848238419
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 2.120525977034049e-14,
+          "log_likelihood": 5.523359547510154e-15,
+          "probability_alive": 3.219646771412954e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -0.5285201305882825,
+        "probability_alive": 0.258611105531155
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p1_h1_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.5285201305882892,
+          "probability_alive": 0.2586111055311452
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 6.661338147750939e-15,
+          "probability_alive": 9.825473767932635e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.02327499949780352,
+        "log_likelihood": -0.5285201305882825,
+        "probability_alive": 0.258611105531155
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p1_h1_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.023274999497803706,
+          "log_likelihood": -0.5285201305882892,
+          "probability_alive": 0.2586111055311452
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.8388068845354155e-16,
+          "log_likelihood": 6.661338147750939e-15,
+          "probability_alive": 9.825473767932635e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.10291795137937645,
+        "log_likelihood": -0.5285201305882825,
+        "probability_alive": 0.258611105531155
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p1_h1_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.1029179513793758,
+          "log_likelihood": -0.5285201305882892,
+          "probability_alive": 0.2586111055311452
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 6.522560269672795e-16,
+          "log_likelihood": 6.661338147750939e-15,
+          "probability_alive": 9.825473767932635e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.21052761478099927,
+        "log_likelihood": -0.5285201305882825,
+        "probability_alive": 0.258611105531155
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p1_h1_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.21052761478101106,
+          "log_likelihood": -0.5285201305883043,
+          "probability_alive": 0.25861110553116456
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.1796119636642288e-14,
+          "log_likelihood": 2.1760371282653068e-14,
+          "probability_alive": -9.547918011776346e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -2.661796763617289,
+        "probability_alive": 0.24259113784345646
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 0,
+      "id": "p1_h2_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -2.6617967636173265,
+          "probability_alive": 0.24259113784346145
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 3.774758283725532e-14,
+          "probability_alive": -4.9960036108132044e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0460923161902559,
+        "log_likelihood": -2.661796763617289,
+        "probability_alive": 0.24259113784345646
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 1,
+      "id": "p1_h2_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.04609231619025775,
+          "log_likelihood": -2.6617967636173265,
+          "probability_alive": 0.24259113784346145
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.8457457784393227e-15,
+          "log_likelihood": 3.774758283725532e-14,
+          "probability_alive": -4.9960036108132044e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.20381210994566387,
+        "log_likelihood": -2.661796763617289,
+        "probability_alive": 0.24259113784345646
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 5,
+      "id": "p1_h2_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.20381210994566912,
+          "log_likelihood": -2.6617967636173265,
+          "probability_alive": 0.24259113784346145
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -5.245803791353865e-15,
+          "log_likelihood": 3.774758283725532e-14,
+          "probability_alive": -4.9960036108132044e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.41691538546249834,
+        "log_likelihood": -2.661796763617289,
+        "probability_alive": 0.24259113784345646
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 12,
+      "id": "p1_h2_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.4169153854625344,
+          "log_likelihood": -2.661796763617342,
+          "probability_alive": 0.24259113784347933
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -3.608224830031759e-14,
+          "log_likelihood": 5.3290705182007514e-14,
+          "probability_alive": -2.2870594307278225e-14
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -4.989109962261304,
+        "probability_alive": 0.6654408588877541
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 0,
+      "id": "p1_h3_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -4.989109962261877,
+          "probability_alive": 0.6654408588881254
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 5.728750807065808e-13,
+          "probability_alive": -3.7136960173711486e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.1929778490774452,
+        "log_likelihood": -4.989109962261304,
+        "probability_alive": 0.6654408588877541
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 1,
+      "id": "p1_h3_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.19297784907755663,
+          "log_likelihood": -4.989109962261877,
+          "probability_alive": 0.6654408588881254
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.1143863609675009e-13,
+          "log_likelihood": 5.728750807065808e-13,
+          "probability_alive": -3.7136960173711486e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.8533140845190323,
+        "log_likelihood": -4.989109962261304,
+        "probability_alive": 0.6654408588877541
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 5,
+      "id": "p1_h3_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.8533140845195124,
+          "log_likelihood": -4.989109962261877,
+          "probability_alive": 0.6654408588881254
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -4.800604358479177e-13,
+          "log_likelihood": 5.728750807065808e-13,
+          "probability_alive": -3.7136960173711486e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.745528126678422,
+        "log_likelihood": -4.989109962261304,
+        "probability_alive": 0.6654408588877541
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 12,
+      "id": "p1_h3_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.745528126679435,
+          "log_likelihood": -4.989109962261851,
+          "probability_alive": 0.6654408588881463
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.0129674876679928e-12,
+          "log_likelihood": 5.46229728115577e-13,
+          "probability_alive": -3.922417946000678e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -6.063453431605968,
+        "probability_alive": 0.9263157894721306
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 0,
+      "id": "p1_h4_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -6.063453431607657,
+          "probability_alive": 0.9263157894736817
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 1.6893153542696382e-12,
+          "probability_alive": -1.5510925877038062e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.36126315789412516,
+        "log_likelihood": -6.063453431605968,
+        "probability_alive": 0.9263157894721306
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 1,
+      "id": "p1_h4_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.36126315789473595,
+          "log_likelihood": -6.063453431607657,
+          "probability_alive": 0.9263157894736817
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -6.107891969975299e-13,
+          "log_likelihood": 1.6893153542696382e-12,
+          "probability_alive": -1.5510925877038062e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.5974421018920457,
+        "log_likelihood": -6.063453431605968,
+        "probability_alive": 0.9263157894721306
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 5,
+      "id": "p1_h4_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.5974421018947234,
+          "log_likelihood": -6.063453431607657,
+          "probability_alive": 0.9263157894736817
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.6776358907909525e-12,
+          "log_likelihood": 1.6893153542696382e-12,
+          "probability_alive": -1.5510925877038062e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 3.2677066629745424,
+        "log_likelihood": -6.063453431605968,
+        "probability_alive": 0.9263157894721306
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 12,
+      "id": "p1_h4_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 3.2677066629800016,
+          "log_likelihood": -6.063453431607606,
+          "probability_alive": 0.9263157894736879
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -5.45918865668682e-12,
+          "log_likelihood": 1.637801005927031e-12,
+          "probability_alive": -1.557309836641707e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": -0.0,
+        "log_likelihood": -5.509918947374466,
+        "probability_alive": 0.9263157894727904
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 0,
+      "id": "p1_h5_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -5.509918947375445,
+          "probability_alive": 0.9263157894736823
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -0.0,
+          "log_likelihood": 9.78772618509538e-13,
+          "probability_alive": -8.919531779838508e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.6391578947362142,
+        "log_likelihood": -5.509918947374466,
+        "probability_alive": 0.9263157894727904
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 1,
+      "id": "p1_h5_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.6391578947368401,
+          "log_likelihood": -5.509918947375445,
+          "probability_alive": 0.9263157894736823
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -6.259437412836633e-13,
+          "log_likelihood": 9.78772618509538e-13,
+          "probability_alive": -8.919531779838508e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 2.82624371873409,
+        "log_likelihood": -5.509918947374466,
+        "probability_alive": 0.9263157894727904
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 5,
+      "id": "p1_h5_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 2.8262437187368192,
+          "log_likelihood": -5.509918947375445,
+          "probability_alive": 0.9263157894736823
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.729372283738485e-12,
+          "log_likelihood": 9.78772618509538e-13,
+          "probability_alive": -8.919531779838508e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 5.7813271729590685,
+        "log_likelihood": -5.509918947374466,
+        "probability_alive": 0.9263157894727904
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 12,
+      "id": "p1_h5_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 5.781327172964626,
+          "log_likelihood": -5.509918947375392,
+          "probability_alive": 0.9263157894736885
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -5.5573323720636836e-12,
+          "log_likelihood": 9.263700917472306e-13,
+          "probability_alive": -8.981704269217516e-13
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 0.9,
+        "beta": 3.1,
+        "delta": 2.8,
+        "gamma": 0.7
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -0.3456933648081944,
+        "probability_alive": 0.150170648464156
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p2_h0_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.3456933648082464,
+          "probability_alive": 0.15017064846416367
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 5.2013948703688584e-14,
+          "probability_alive": -7.66053886991358e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.07182074491763982,
+        "log_likelihood": -0.3456933648081944,
+        "probability_alive": 0.150170648464156
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p2_h0_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.07182074491764355,
+          "log_likelihood": -0.3456933648082464,
+          "probability_alive": 0.15017064846416367
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -3.733124920302089e-15,
+          "log_likelihood": 5.2013948703688584e-14,
+          "probability_alive": -7.66053886991358e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.1882487495375202,
+        "log_likelihood": -0.3456933648081944,
+        "probability_alive": 0.150170648464156
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p2_h0_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.18824874953752985,
+          "log_likelihood": -0.3456933648082464,
+          "probability_alive": 0.15017064846416367
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -9.658940314238862e-15,
+          "log_likelihood": 5.2013948703688584e-14,
+          "probability_alive": -7.66053886991358e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.2418680970902386,
+        "log_likelihood": -0.3456933648081944,
+        "probability_alive": 0.150170648464156
+      },
+      "history": {
+        "n": 1,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p2_h0_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.24186809709025073,
+          "log_likelihood": -0.3456933648082464,
+          "probability_alive": 0.15017064846416367
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.2129186544029835e-14,
+          "log_likelihood": 5.2013948703688584e-14,
+          "probability_alive": -7.66053886991358e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -0.4538922490687035,
+        "probability_alive": 0.003402887259405116
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 0,
+      "id": "p2_h1_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -0.45389224906876063,
+          "probability_alive": 0.0034028872594053195
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 5.71209746169643e-14,
+          "probability_alive": -2.0339632755828063e-16
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0007798283302803328,
+        "log_likelihood": -0.4538922490687035,
+        "probability_alive": 0.003402887259405116
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 1,
+      "id": "p2_h1_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.000779828330280386,
+          "log_likelihood": -0.45389224906876063,
+          "probability_alive": 0.0034028872594053195
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -5.323432666903827e-17,
+          "log_likelihood": 5.71209746169643e-14,
+          "probability_alive": -2.0339632755828063e-16
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0026558577502475487,
+        "log_likelihood": -0.4538922490687035,
+        "probability_alive": 0.003402887259405116
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "p2_h1_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0026558577502477105,
+          "log_likelihood": -0.45389224906876063,
+          "probability_alive": 0.0034028872594053195
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.6176296413483726e-16,
+          "log_likelihood": 5.71209746169643e-14,
+          "probability_alive": -2.0339632755828063e-16
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.00403908956185107,
+        "log_likelihood": -0.4538922490687035,
+        "probability_alive": 0.003402887259405116
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 12,
+      "id": "p2_h1_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.004039089561851308,
+          "log_likelihood": -0.4538922490687615,
+          "probability_alive": 0.0034028872594053226
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.3765711620882257e-16,
+          "log_likelihood": 5.800915303666443e-14,
+          "probability_alive": -2.0643209364124004e-16
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -1.8907811863252522,
+        "probability_alive": 0.004921791412471466
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 0,
+      "id": "p2_h2_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -1.8907811863254986,
+          "probability_alive": 0.004921791412472693
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 2.4646951146678475e-13,
+          "probability_alive": -1.227316859253591e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0016405971374904744,
+        "log_likelihood": -1.8907811863252522,
+        "probability_alive": 0.004921791412471466
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 1,
+      "id": "p2_h2_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0016405971374908973,
+          "log_likelihood": -1.8907811863254986,
+          "probability_alive": 0.004921791412472693
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -4.2283884726934673e-16,
+          "log_likelihood": 2.4646951146678475e-13,
+          "probability_alive": -1.227316859253591e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.005587374109724502,
+        "log_likelihood": -1.8907811863252522,
+        "probability_alive": 0.004921791412471466
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 5,
+      "id": "p2_h2_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.005587374109725901,
+          "log_likelihood": -1.8907811863254986,
+          "probability_alive": 0.004921791412472693
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.399054483375295e-15,
+          "log_likelihood": 2.4646951146678475e-13,
+          "probability_alive": -1.227316859253591e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.008497407077860864,
+        "log_likelihood": -1.8907811863252522,
+        "probability_alive": 0.004921791412471466
+      },
+      "history": {
+        "n": 6,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 12,
+      "id": "p2_h2_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.008497407077862965,
+          "log_likelihood": -1.890781186325499,
+          "probability_alive": 0.004921791412472704
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.1007501294079134e-15,
+          "log_likelihood": 2.469136006766348e-13,
+          "probability_alive": -1.2377252001094519e-15
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -6.108756855892867,
+        "probability_alive": 0.19802634913140224
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 0,
+      "id": "p2_h3_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -6.108756855909586,
+          "probability_alive": 0.19802634913471365
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 1.6719070572435157e-11,
+          "probability_alive": -3.311406704398223e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.08663652774498772,
+        "log_likelihood": -6.108756855892867,
+        "probability_alive": 0.19802634913140224
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 1,
+      "id": "p2_h3_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.08663652774643732,
+          "log_likelihood": -6.108756855909586,
+          "probability_alive": 0.19802634913471365
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.449604325465259e-12,
+          "log_likelihood": 1.6719070572435157e-11,
+          "probability_alive": -3.311406704398223e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.2950576232378581,
+        "log_likelihood": -6.108756855892867,
+        "probability_alive": 0.19802634913140224
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 5,
+      "id": "p2_h3_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.29505762324279233,
+          "log_likelihood": -6.108756855909586,
+          "probability_alive": 0.19802634913471365
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -4.9342196994928145e-12,
+          "log_likelihood": 1.6719070572435157e-11,
+          "probability_alive": -3.311406704398223e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.4487304209171353,
+        "log_likelihood": -6.108756855892867,
+        "probability_alive": 0.19802634913140224
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 12,
+      "id": "p2_h3_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.44873042092463833,
+          "log_likelihood": -6.1087568559095855,
+          "probability_alive": 0.1980263491347138
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -7.503053733870502e-12,
+          "log_likelihood": 1.6718182394015457e-11,
+          "probability_alive": -3.311573237851917e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -7.5179122053317755,
+        "probability_alive": 0.773584905607441
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 0,
+      "id": "p2_h4_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -7.5179122054002026,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 6.842704181053705e-11,
+          "probability_alive": -5.2935988925639776e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.41902515720402694,
+        "log_likelihood": -7.5179122053317755,
+        "probability_alive": 0.773584905607441
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 1,
+      "id": "p2_h4_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.4190251572327043,
+          "log_likelihood": -7.5179122054002026,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.867733828182395e-11,
+          "log_likelihood": 6.842704181053705e-11,
+          "probability_alive": -5.2935988925639776e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 1.427072046624617,
+        "log_likelihood": -7.5179122053317755,
+        "probability_alive": 0.773584905607441
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 5,
+      "id": "p2_h4_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 1.4270720467222717,
+          "log_likelihood": -7.5179122054002026,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -9.765477315681892e-11,
+          "log_likelihood": 6.842704181053705e-11,
+          "probability_alive": -5.2935988925639776e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 2.170323996830656,
+        "log_likelihood": -7.5179122053317755,
+        "probability_alive": 0.773584905607441
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 12,
+      "id": "p2_h4_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 2.17032399697917,
+          "log_likelihood": -7.5179122054002026,
+          "probability_alive": 0.7735849056603775
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.4851408991489734e-10,
+          "log_likelihood": 6.842704181053705e-11,
+          "probability_alive": -5.293654403715209e-11
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "log_likelihood": -4.506339667333627,
+        "probability_alive": 0.7735849056577716
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 0,
+      "id": "p2_h5_m0",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": -4.506339667336993,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": 0.0,
+          "log_likelihood": 3.3661962106634746e-12,
+          "probability_alive": -2.605360371887855e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.6607704402493408,
+        "log_likelihood": -4.506339667333627,
+        "probability_alive": 0.7735849056577716
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 1,
+      "id": "p2_h5_m1",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 0.6607704402515723,
+          "log_likelihood": -4.506339667336993,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -2.231437257194102e-12,
+          "log_likelihood": 3.3661962106634746e-12,
+          "probability_alive": -2.605360371887855e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 2.250382842900617,
+        "log_likelihood": -4.506339667333627,
+        "probability_alive": 0.7735849056577716
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 5,
+      "id": "p2_h5_m5",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 2.2503828429081985,
+          "log_likelihood": -4.506339667336993,
+          "probability_alive": 0.773584905660377
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -7.581490990560269e-12,
+          "log_likelihood": 3.3661962106634746e-12,
+          "probability_alive": -2.605360371887855e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 3.422433995224857,
+        "log_likelihood": -4.506339667333627,
+        "probability_alive": 0.7735849056577716
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 6
+      },
+      "horizon": 12,
+      "id": "p2_h5_m12",
+      "independent_check": {
+        "expected": {
+          "expected_future_purchases": 3.422433995236379,
+          "log_likelihood": -4.506339667336993,
+          "probability_alive": 0.7735849056603779
+        },
+        "library_minus_forward": {
+          "expected_future_purchases": -1.1521894549559875e-11,
+          "log_likelihood": 3.3661962106634746e-12,
+          "probability_alive": -2.606248550307555e-12
+        },
+        "method": "finite-state beta quadrature"
+      },
+      "parameters": {
+        "alpha": 2.2,
+        "beta": 1.4,
+        "delta": 2.2,
+        "gamma": 2.4
+      }
+    }
+  ],
+  "fixed_pq_cases": [
+    {
+      "expected": {
+        "expected_future_purchases": 0.4430944623955432,
+        "likelihood": 0.012176912384,
+        "log_likelihood": -4.408213547687225,
+        "probability_alive": 0.37660167130919225
+      },
+      "history": {
+        "n": 6,
+        "tx": 4,
+        "weight": 1,
+        "x": 2
+      },
+      "horizon": 5,
+      "id": "pq0",
+      "parameters": {
+        "p": 0.35,
+        "q": 0.2
+      },
+      "pattern": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 2.16657,
+        "likelihood": 0.004921675101000003,
+        "log_likelihood": -5.314106338740962,
+        "probability_alive": 0.9
+      },
+      "history": {
+        "n": 6,
+        "tx": 6,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 4,
+      "id": "pq1",
+      "parameters": {
+        "p": 0.7,
+        "q": 0.1
+      },
+      "pattern": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.00438293872374487,
+        "likelihood": 0.7720532131840001,
+        "log_likelihood": -0.2587018023380361,
+        "probability_alive": 0.009504985087926939
+      },
+      "history": {
+        "n": 6,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 5,
+      "id": "pq2",
+      "parameters": {
+        "p": 0.2,
+        "q": 0.4
+      },
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "likelihood": 0.42,
+        "log_likelihood": -0.8675005677047231,
+        "probability_alive": 0.7
+      },
+      "history": {
+        "n": 1,
+        "tx": 1,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 0,
+      "id": "pq3",
+      "parameters": {
+        "p": 0.6,
+        "q": 0.3
+      },
+      "pattern": [
+        1
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "likelihood": 1.0,
+        "log_likelihood": 0.0,
+        "probability_alive": 1.0
+      },
+      "history": {
+        "n": 3,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 4,
+      "id": "pq4",
+      "parameters": {
+        "p": 0.0,
+        "q": 0.0
+      },
+      "pattern": [
+        0,
+        0,
+        0
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 4,
+      "id": "pq5",
+      "parameters": {
+        "p": 0.0,
+        "q": 0.0
+      },
+      "pattern": [
+        1,
+        1,
+        1
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 4,
+      "id": "pq6",
+      "parameters": {
+        "p": 0.0,
+        "q": 0.0
+      },
+      "pattern": [
+        0,
+        1,
+        0
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "likelihood": 1.0,
+        "log_likelihood": 0.0,
+        "probability_alive": 0.0
+      },
+      "history": {
+        "n": 3,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 4,
+      "id": "pq7",
+      "parameters": {
+        "p": 0.0,
+        "q": 1.0
+      },
+      "pattern": [
+        0,
+        0,
+        0
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 4,
+      "id": "pq8",
+      "parameters": {
+        "p": 0.0,
+        "q": 1.0
+      },
+      "pattern": [
+        1,
+        1,
+        1
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 4,
+      "id": "pq9",
+      "parameters": {
+        "p": 0.0,
+        "q": 1.0
+      },
+      "pattern": [
+        0,
+        1,
+        0
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 4,
+      "id": "pq10",
+      "parameters": {
+        "p": 1.0,
+        "q": 0.0
+      },
+      "pattern": [
+        0,
+        0,
+        0
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 4.0,
+        "likelihood": 1.0,
+        "log_likelihood": 0.0,
+        "probability_alive": 1.0
+      },
+      "history": {
+        "n": 3,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 4,
+      "id": "pq11",
+      "parameters": {
+        "p": 1.0,
+        "q": 0.0
+      },
+      "pattern": [
+        1,
+        1,
+        1
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 4,
+      "id": "pq12",
+      "parameters": {
+        "p": 1.0,
+        "q": 0.0
+      },
+      "pattern": [
+        0,
+        1,
+        0
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": 0.0,
+        "likelihood": 1.0,
+        "log_likelihood": 0.0,
+        "probability_alive": 0.0
+      },
+      "history": {
+        "n": 3,
+        "tx": 0,
+        "weight": 1,
+        "x": 0
+      },
+      "horizon": 4,
+      "id": "pq13",
+      "parameters": {
+        "p": 1.0,
+        "q": 1.0
+      },
+      "pattern": [
+        0,
+        0,
+        0
+      ],
+      "status": "defined"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 3,
+        "weight": 1,
+        "x": 3
+      },
+      "horizon": 4,
+      "id": "pq14",
+      "parameters": {
+        "p": 1.0,
+        "q": 1.0
+      },
+      "pattern": [
+        1,
+        1,
+        1
+      ],
+      "status": "zero_likelihood"
+    },
+    {
+      "expected": {
+        "expected_future_purchases": null,
+        "likelihood": 0.0,
+        "log_likelihood": null,
+        "probability_alive": null
+      },
+      "history": {
+        "n": 3,
+        "tx": 2,
+        "weight": 1,
+        "x": 1
+      },
+      "horizon": 4,
+      "id": "pq15",
+      "parameters": {
+        "p": 1.0,
+        "q": 1.0
+      },
+      "pattern": [
+        0,
+        1,
+        0
+      ],
+      "status": "zero_likelihood"
+    }
+  ],
+  "fixed_pq_convention": "Finite-state forward masses for one stored pattern. p is purchase probability; q is dropout probability. Zero likelihood has log_likelihood=null and undefined conditionals=null; status=zero_likelihood identifies this case.",
+  "metadata": {
+    "api_paths": [
+      "lifetimes.BetaGeoBetaBinomFitter._loglikelihood",
+      "lifetimes.BetaGeoBetaBinomFitter._negative_log_likelihood",
+      "lifetimes.BetaGeoBetaBinomFitter.conditional_probability_alive",
+      "lifetimes.BetaGeoBetaBinomFitter.conditional_expected_number_of_purchases_up_to_time"
+    ],
+    "generator_sha256": "e216ab0e69021a989aa62a641ee0dba791ececb3fc618860bf5fc1fcfb29961f",
+    "implementation": {
+      "dependencies": {
+        "Lifetimes": "0.11.3",
+        "autograd": "1.8.0",
+        "dill": "0.4.0",
+        "numpy": "2.2.6",
+        "pandas": "2.2.3",
+        "python-dateutil": "2.9.0.post0",
+        "pytz": "2025.2",
+        "scipy": "1.16.3",
+        "six": "1.17.0",
+        "tzdata": "2025.2"
+      },
+      "git_commit": "bd3ae6e13bc82b46fca7ce93130b2cfce4e8d7cf",
+      "git_tag": "v0.11.3",
+      "license": "MIT",
+      "package": "Lifetimes",
+      "python": "3.13",
+      "release": "https://pypi.org/project/Lifetimes/0.11.3/",
+      "source_files": [
+        {
+          "path": "lifetimes/fitters/__init__.py",
+          "sha256": "77a75fc3763c63943884f2d70c4386f28e3e23c80b1d34ec36469607f0816b8c",
+          "url": "https://github.com/CamDavidsonPilon/lifetimes/blob/bd3ae6e13bc82b46fca7ce93130b2cfce4e8d7cf/lifetimes/fitters/__init__.py"
+        },
+        {
+          "path": "lifetimes/fitters/beta_geo_fitter.py",
+          "sha256": "1304c4c12da26125069a564fc7747d4589f7563c1941cd70e105675368ef6069",
+          "url": "https://github.com/CamDavidsonPilon/lifetimes/blob/bd3ae6e13bc82b46fca7ce93130b2cfce4e8d7cf/lifetimes/fitters/beta_geo_fitter.py"
+        },
+        {
+          "path": "lifetimes/fitters/beta_geo_beta_binom_fitter.py",
+          "sha256": "a58207289f533c11459b0dc3320e3738d9aeac8083ef0ec7b5042c7572e01fcd",
+          "url": "https://github.com/CamDavidsonPilon/lifetimes/blob/bd3ae6e13bc82b46fca7ce93130b2cfce4e8d7cf/lifetimes/fitters/beta_geo_beta_binom_fitter.py"
+        }
+      ],
+      "version": "0.11.3",
+      "wheel_sha256": "261e3dc89977c2b60767ca6728aaa29d429de0c814635070a749c36555895da8"
+    },
+    "likelihood_convention": "One binary pattern with given x and last purchase tx; no combinatorial multiplicity. Customers start active at time zero; dropout precedes each opportunity. Fixed log_likelihood is per history; weight multiplies only the fit total.",
+    "mean_convention": "Purchases over opportunities n+1 through n+horizon.",
+    "model": "BG/BB",
+    "model_source": {
+      "authors": [
+        "Peter S. Fader",
+        "Bruce G. S. Hardie",
+        "Jen Shang"
+      ],
+      "doi": "10.1287/mksc.1100.0580",
+      "equations": [
+        "4",
+        "5",
+        "6",
+        "11",
+        "13",
+        "A10"
+      ],
+      "title": "Customer-Base Analysis in a Discrete-Time Noncontractual Setting",
+      "url": "https://doi.org/10.1287/mksc.1100.0580",
+      "year": 2010
+    },
+    "numerical_note": "The package initializes the dropout sum with 1e-15 before beta normalization. Library outputs retain that floor. Finite-state checks report its bias.",
+    "parameter_order": [
+      "alpha",
+      "beta",
+      "gamma",
+      "delta"
+    ],
+    "probability_convention": "Alive at opportunity n+1, including survival before that opportunity; conditional_probability_alive is called with m_periods_in_future=1, independently of horizon.",
+    "schema_version": 1,
+    "tolerances": {
+      "fixed": {
+        "atol": 1e-09,
+        "rtol": 1e-09
+      },
+      "justification": "Fixed values use moderate finite inputs. MLE checks allow optimizer stopping differences; the total objective and independently differenced gradient must also agree.",
+      "mle_log_parameter_mean_nll_gradient_max_abs": 1e-06,
+      "mle_parameters": {
+        "atol": 1e-05,
+        "rtol": 0.0001
+      },
+      "mle_total_log_likelihood": {
+        "atol": 1e-06,
+        "rtol": 0.0
+      }
+    }
+  }
+}
